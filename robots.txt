@@ -1,0 +1,17 @@
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: MetaAI
+User-agent: Meta-AI
+User-agent: Meta AI
+User-agent: Meta.AI
+User-agent: meta-ai
+User-agent: metaai
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: meta-externalfetcher
+Disallow: / 
