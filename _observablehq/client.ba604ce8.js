@@ -1,0 +1,1 @@
+var ie=Object.defineProperty
