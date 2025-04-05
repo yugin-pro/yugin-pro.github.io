@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.0">
+<title>experience research | Yugin Dmitriy</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight.dcdbf18e.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.dcdbf18e.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="modulepreload" href="./_observablehq/client.ba604ce8.js">
+<link rel="modulepreload" href="./_observablehq/runtime.9393ab6d.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.55124be9.js">
+<link rel="modulepreload" href="./_npm/@duckdb/duckdb-wasm@1.29.0/36014af5.js">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs">
+<link rel="modulepreload" href="./_import/components/KeyPointList.0d55bcb2.js">
+<link rel="modulepreload" href="./_import/components/CompletionPercentageChart.e6ad9b2b.js">
+<link rel="modulepreload" href="./_npm/react@19.1.0/jsx-runtime.2a823644.js">
+<link rel="modulepreload" href="./_import/components/Feedback.32e3b5f1.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/e780feca.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/duckdb.d51cccc5.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.c3b3de1a.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/mermaid.2bd94947.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/d761ef9b.js">
+<link rel="modulepreload" href="./_npm/react-dom@19.1.0/ab55ceaa.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_npm/react@19.1.0/c1c75d32.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/mermaid@11.6.0/dist/mermaid.esm.min.mjs.865ecc3a.js">
+<link rel="modulepreload" href="./_npm/apache-arrow@19.0.1/42e4d6a9.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/5ced1d52.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/86074ef6.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/843b6a76.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="./_npm/tslib@2.8.1/b62a9c4a.js">
+<link rel="modulepreload" href="./_npm/flatbuffers@24.12.23/ff64aefa.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/02d43215.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/aa00730b.js">
+
+    <meta name="keywords" content="web experience, data experience, user experience, database experience, customer jurney experience">
+    <meta name="description" content="Yugin Dmitriy: Experience Overview. Learn more about web analytics experience.">
+    <meta name="author" content="Yugin Dmitriy">
+    <link rel="icon" href="./_file/web-analyst.21c0b145.ico" type="image/png" sizes="48x48">
+  <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M282T4N');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="google-site-verification" content="SnaMInDF57_RYreZY9l7S1zwVfZSGmcLEV421Ohkl_g">
+  <meta name="msvalidate.01" content="DEA98ACCD6D8E6BB2DF43CD0031A6E00">
+    
+<script type="module">
+
+import {define} from "./_observablehq/client.ba604ce8.js";
+import {registerFile} from "./_observablehq/stdlib.55124be9.js";
+
+registerFile("./img/pers2.jpg", {"name":"./img/pers2.jpg","mimeType":"image/jpeg","path":"./_file/img/pers2.dd252aa0.jpg","lastModified":1743847371314,"size":150429});
+
+define({id: "fbbb8429", inputs: ["d3","DuckDBClient"], outputs: ["duckdb","toolsCsv","sql"], body: async (d3,DuckDBClient) => {
+const duckdb = await import("./_npm/@duckdb/duckdb-wasm@1.29.0/36014af5.js");
+        const toolsCsv = await d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTc26cIfILij4WUX9yF4070HAflKpxLqHJajwlnUpkpgp5zyCUkYhqZeKYOg84G8X-K7Ba1hZK9yon_/pub?gid=774793010&single=true&output=csv')
+    const sql = DuckDBClient.sql({tools: toolsCsv});
+    
+return {duckdb,toolsCsv,sql};
+}});
+
+define({id: "7349aa6b", outputs: ["mermaidLib","renderKeyPointList","CompletionPercentageChart","nextDiagramId","drawDiagram"], body: async () => {
+const [{default: mermaidLib}, {renderKeyPointList}, {default: CompletionPercentageChart}] = await Promise.all([import("https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"), import("./_import/components/KeyPointList.0d55bcb2.js"), import("./_import/components/CompletionPercentageChart.e6ad9b2b.js")]);
+                
+
+    mermaidLib.initialize({
+      startOnLoad: false,
+      securityLevel: "loose",
+      theme: "dark"
+    });
+
+    let nextDiagramId = 0;
+
+    const drawDiagram = async function (source) {
+      const root = document.createElement("div");
+      root.innerHTML = (await mermaidLib.render(`mermaidLib-${++nextDiagramId}`, source)).svg;
+      return root.removeChild(root.firstChild);
+    };
+    
+    
+return {mermaidLib,renderKeyPointList,CompletionPercentageChart,nextDiagramId,drawDiagram};
+}});
+
+define({id: "e61bd1de", mode: "inline", inputs: ["FileAttachment","display"], body: async (FileAttachment,display) => {
+display(await(
+FileAttachment("./img/pers2.jpg").image()
+))
+}});
+
+define({id: "2ec88a72", outputs: ["expKeyPoints"], body: () => {
+  const expKeyPoints = ['Adaptable to different company sizes and working styles',
+  'Capable of leveraging gained experience and implementing best practices in new environments',
+  'Senior level provides companies with the advantage of accelerating data analytics projects']
+
+return {expKeyPoints};
+}});
+
+define({id: "b5b13250", inputs: ["mermaid","display"], body: async (mermaid,display) => {
+display(await(
+await mermaid`timeline
+    title Experience Timeline
+    section Cheboksary
+        2008 : University : Freelance web master : Maintaining websites, SEO
+        2012 : Elara : Tester of aerospace electronics/computing systems : Conducting tests for aviation electronic components and computing systems
+    section Moscow
+        2013 : RealWeb marketing agency : Paid search manager : Launch and maintain digital ads on Google, Bing, Facebook, Mailchimp, etc.
+        2015 : Black Sugar digital agency : Paid search analyst : Improve ad performance in digital channels Paid, Social, Email, Organic, Referral
+        2018 : Alpari : Web analyst : Built end-to-end website user behavior and performance reporting to CMO, social marketing team, dev team, paid ad team 
+        2022 : Raiffeisen Bank : Marketing data analyst : Create cloud-based DWH for marketing team. Comprehensive Marketing performance dashboards for 'Client Happiness' division.
+    section Amsterdam
+        2023 : Raiffeisen Bank : Senior web analyst : Conversion rate optimization with high resultant A/B test framework.
+        2024 : WeAreEves : Senior web analyst : AWS cloud-based DWH. User behavior improvement research`
+))
+}});
+
+define({id: "04dd286a", mode: "inline", inputs: ["renderKeyPointList","expKeyPoints","display"], body: async (renderKeyPointList,expKeyPoints,display) => {
+display(await(
+renderKeyPointList(expKeyPoints)
+))
+}});
+
+define({id: "372c0c87", inputs: ["sql"], outputs: ["toolGroupList"], body: async (sql) => {
+const toolGroupList = await sql`select distinct category from tools`;
+return {toolGroupList};
+}});
+
+define({id: "6ce51756", inputs: ["view","Inputs","toolGroupList"], outputs: ["favorite"], body: (view,Inputs,toolGroupList) => {
+const favorite = view(Inputs.radio( toolGroupList, {label: "Choose related experience", format: x => x.category ?? '%%'}));
+return {favorite};
+}});
+
+define({id: "b91c2eb4", inputs: ["sql","favorite"], outputs: ["toolList"], body: async (sql,favorite) => {
+const toolList = await sql`select concat(tool,':::', lower(REGEXP_REPLACE(category ,'\\s+','')),': [',x,',',y,']') toolRow 
+from tools
+where category like ${favorite?.category || '%%'}`;
+return {toolList};
+}});
+
+define({id: "ae9e34f3", inputs: ["Plot"], outputs: ["toolsKeyPoints","toolColor","toolChartContent"], body: (Plot) => {
+const toolsKeyPoints = ['Core SQL + JavaScript skills allow seamless maintenance of data applications and pipeline automations',
+  'ETL with DuckDB, ClickHouse, Observable skills can be considered an advantage to create cost-effective data applications',
+  'Visualization: Looker, Power BI, Excel, D3, Google Charts',
+  'High level of experience in GCP cloud, start level in AWS']
+const toolColor = Plot.scale({color: {scheme: "Pastel1", domain: [1,2,3,4,5,6,7,8,9]}});  
+const toolChartContent = (toolsData) => {
+  return toolsData.join('\n')
+}
+
+return {toolsKeyPoints,toolColor,toolChartContent};
+}});
+
+define({id: "89ad20b8", inputs: ["mermaid","toolChartContent","d3","toolList","toolColor","display"], body: async (mermaid,toolChartContent,d3,toolList,toolColor,display) => {
+display(await(
+await mermaid`quadrantChart
+  title Mastering over years of experience
+  x-axis 0 - 5 years --> 5 - 10 years
+  y-axis Intermediate --> Advanced
+  quadrant-1 Core
+  quadrant-2 Advantage
+  quadrant-3 Emerging
+  quadrant-4 Supportive
+  ${toolChartContent(d3.map(toolList,(d) => [d.toolRow]))}
+  classDef dataengineer color:${toolColor.apply(1)}, radius : 10
+  classDef dataanalyst color:${toolColor.apply(2)}, radius : 10
+  classDef productanalyst color:${toolColor.apply(3)}, radius : 10
+  classDef webanalyst color:${toolColor.apply(4)}, radius : 10
+  classDef cro color:${toolColor.apply(5)}, radius : 10`
+))
+}});
+
+define({id: "fb2f4fde", mode: "inline", inputs: ["renderKeyPointList","toolsKeyPoints","display"], body: async (renderKeyPointList,toolsKeyPoints,display) => {
+display(await(
+renderKeyPointList(toolsKeyPoints)
+))
+}});
+
+define({id: "96dc2ed1", outputs: ["achievementKeyPoints","challengesKeyPoints"], body: () => {
+const achievementKeyPoints = ['Able to work on complex projects to ensure comprehensive delivery of insights to any team relying on customer study',
+  'Develop data anlytics projects by translating business needs to measurable KPIs',
+  'Can be involved in various areas of work such as product analytics, performance analytics, conversion optimization']
+
+const challengesKeyPoints = ['Can be involved in removing clutter projects',
+  'Hands-on experience with building user data DWH with different tool sets']
+
+return {achievementKeyPoints,challengesKeyPoints};
+}});
+
+define({id: "04d0ddd0", inputs: ["Plot","d3"], outputs: ["getArrowChart","conFunImp","userExpImp","productImp"], body: (Plot,d3) => {
+  const getArrowChart = (data) => Plot.plot({
+          title: "Impact in metrics",
+          subtitle: "Key perfomance indicators growth in relative units",
+          x: {label: null,axis:null},
+          y: {label: null,axis:null},
+        color: {
+          type: "categorical",
+          domain: [-1, 1],
+          unknown: "#aaa",
+          transform: Math.sign,
+          tickFormat: (c) => c < 0 ? "female" : "male",
+        },
+        marks: [
+          Plot.ruleX([0]),
+          Plot.link(
+            data,
+              {
+                y: "metricName",
+                x1: 0,
+                x2: "growth",
+                markerStart: "dot",
+                markerEnd: "arrow",
+                stroke: "growth",
+                strokeWidth: 4
+              }
+          ),
+          d3
+            .groups(data, (d) => d.growth > 0)
+            .map(([growth, states]) => [
+              Plot.axisY({
+                x: 0,
+                ticks: states.map((d) => d.metricName),
+                tickSize: 0,
+                anchor: growth ? "left" : "right",
+                fontSize : 14,
+              })
+            ]),
+          Plot.text(data, {
+            x: d => d.growth + Math.sign(d.growth) * 0.05,
+            y: "metricName",
+            text: d => d3.format(".0%")(d.growth),
+            textAnchor: "middle",
+            fontSize : 14,
+          })
+        ]
+      })
+
+  const conFunImp = [
+    {metricName:"E2E conversion rate", growth: 0.35},
+    {metricName:"Visit to Product Interaction", growth: 0.9},
+    {metricName:"Product to Cart", growth: 0.3},
+    {metricName:"Abandoned cart rate", growth: -0.20},
+    {metricName:"Form interaction to Checkout", growth: 0.4},
+    {metricName:"Form Step skipping rate", growth: -0.25},
+    {metricName:"ROAS", growth: 0.5}
+]
+
+  const userExpImp = [
+    {metricName:"Conversion rate", growth: 0.4},
+    {metricName:"Bounce rate", growth: -0.2},
+    {metricName:"Session duration", growth: 0.3},
+    {metricName:"Pages per session", growth: 0.2},
+    {metricName:"Active events per session", growth: 0.4},
+    {metricName:"Website total orders", growth: 0.1},
+    {metricName:"Customer Acquisition Cost", growth: -0.4}
+]
+
+  const productImp = [
+    {metricName:"Impression to Interaction", growth: 0.4},
+    {metricName:"Subscription rate", growth: 0.7},
+    {metricName:"Active Interaction", growth: 0.3},
+    {metricName:"Product page Bounce rate", growth: -0.2},
+    {metricName:"Active events per session", growth: 0.4},
+    {metricName:"Website total orders", growth: 0.1}
+]
+
+
+return {getArrowChart,conFunImp,userExpImp,productImp};
+}});
+
+define({id: "c0a81d99", mode: "inline", inputs: ["CompletionPercentageChart","display"], body: async (CompletionPercentageChart,display) => {
+display(await(
+CompletionPercentageChart(150,{
+      label: "New Customers",
+      value: 23,
+      color: "orange"
+      }
+      )
+))
+}});
+
+define({id: "b08f8f04", mode: "inline", inputs: ["CompletionPercentageChart","display"], body: async (CompletionPercentageChart,display) => {
+display(await(
+CompletionPercentageChart(150,{
+      label: "Success test",
+      value: 86,
+      color: "orange"
+      }
+      )
+))
+}});
+
+define({id: "70fa4a75", mode: "inline", inputs: ["CompletionPercentageChart","display"], body: async (CompletionPercentageChart,display) => {
+display(await(
+CompletionPercentageChart(150,{
+      label: "CR Growth",
+      value: 40,
+      color: "orange"
+      }
+      )
+))
+}});
+
+define({id: "5b335b04", mode: "inline", inputs: ["CompletionPercentageChart","display"], body: async (CompletionPercentageChart,display) => {
+display(await(
+CompletionPercentageChart(150,{
+      label: "Bounce rate",
+      value: -45,
+      color: "lightblue"
+      }
+      )
+))
+}});
+
+define({id: "fcb043d9", mode: "inline", inputs: ["CompletionPercentageChart","display"], body: async (CompletionPercentageChart,display) => {
+display(await(
+CompletionPercentageChart(150,{
+      label: "Engaged sessions",
+      value: 95,
+      color: "orange"
+      }
+      )
+))
+}});
+
+define({id: "225d399c", mode: "inline", inputs: ["CompletionPercentageChart","display"], body: async (CompletionPercentageChart,display) => {
+display(await(
+CompletionPercentageChart(150,{
+      label: "CAC",
+      value: -15,
+      color: "lightblue"
+      }
+      )
+))
+}});
+
+define({id: "b8eda615", mode: "inline", inputs: ["CompletionPercentageChart","display"], body: async (CompletionPercentageChart,display) => {
+display(await(
+CompletionPercentageChart(150,{
+      label: "SR Growth",
+      value: 37,
+      color: "orange"
+      }
+      )
+))
+}});
+
+define({id: "3138d780", mode: "inline", inputs: ["CompletionPercentageChart","display"], body: async (CompletionPercentageChart,display) => {
+display(await(
+CompletionPercentageChart(150,{
+      label: "CPS",
+      value: -5,
+      color: "lightblue"
+      }
+      )
+))
+}});
+
+define({id: "e3b03617", mode: "inline", inputs: ["CompletionPercentageChart","display"], body: async (CompletionPercentageChart,display) => {
+display(await(
+CompletionPercentageChart(150,{
+      label: "Retention",
+      value: 21,
+      color: "orange"
+      }
+      )
+))
+}});
+
+define({id: "ba18b10b", mode: "inline", inputs: ["renderKeyPointList","achievementKeyPoints","display"], body: async (renderKeyPointList,achievementKeyPoints,display) => {
+display(await(
+renderKeyPointList(achievementKeyPoints)
+))
+}});
+
+define({id: "8f1b18ec", outputs: ["diagramArch","excToPbi"], body: () => {
+  const diagramArch = `
+    architecture-beta
+    group api(cloud)[Transition GCP to Clickhouse]
+
+    service db(database)[ClickHouse] in api
+    service disk1(disk)[Storage] in api
+    service disk2(disk)[Storage] in api
+    service server(server)[GCP] in api
+
+    db:L <-- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
+    `
+
+  const excToPbi = `
+  flowchart TD
+    B["DATA"]
+    B-->C["Excel"]
+    B-->D["Power BI"]
+    E["Reporting"]
+    C-->E
+    D-->E
+
+  `  
+return {diagramArch,excToPbi};
+}});
+
+define({id: "98dd8821", mode: "inline", inputs: ["drawDiagram","diagramArch","display"], body: async (drawDiagram,diagramArch,display) => {
+display(await(
+drawDiagram(diagramArch)
+))
+}});
+
+define({id: "c29ffec2", mode: "inline", inputs: ["drawDiagram","excToPbi","display"], body: async (drawDiagram,excToPbi,display) => {
+display(await(
+drawDiagram(excToPbi)
+))
+}});
+
+define({id: "414e704d", mode: "inline", inputs: ["renderKeyPointList","challengesKeyPoints","display"], body: async (renderKeyPointList,challengesKeyPoints,display) => {
+display(await(
+renderKeyPointList(challengesKeyPoints)
+))
+}});
+
+define({id: "35a9c8ed", outputs: ["strengthKeyPoints"], body: () => {
+const strengthKeyPoints = ['Absolutely self-sufficient when it comes to working with data and statistics',
+  'Highly dependent on colleagues when it comes to building strong and transparent relationships']
+
+return {strengthKeyPoints};
+}});
+
+define({id: "a6b91269", outputs: ["strengths"], body: () => {
+const strengths = [
+  {State:"Working with big data", value: 0.7},
+    {State:"Problem solving", value: 0.6},
+      {State:"Presenting findings", value: 0.5},
+        {State:"Process automation", value: 0.4},
+          {State:"Self-education", value: 0.3},
+            {State:"Time management", value: 0.2},
+              {State:"Project Management", value: 0.1},
+  {State:"Collaboration", value: -0.1},
+    {State:"Human relationships management", value: -0.2},
+      {State:"Feedback management", value: -0.3},
+        {State:"First move", value: -0.4},
+          {State:"Defending own point of view", value: -0.5},
+            {State:"Stakeholder management", value: -0.6}
+  ] 
+return {strengths};
+}});
+
+define({id: "ebac0ada", inputs: ["Plot","strengths","d3","display"], body: async (Plot,strengths,d3,display) => {
+display(await(
+Plot.plot({
+  label: null,
+  color: {
+    scheme: "PiYG",
+    type: "ordinal"
+  },
+  marks: [
+    Plot.barX(strengths, {
+      x: "value",
+      y: "State",
+      fill: (d) => d.value > 0,
+      sort: { y: "-x" }
+    }),
+    Plot.gridX({ stroke: "white", strokeOpacity: 0.5 }),
+    d3
+      .groups(strengths, (d) => d.value > 0)
+      .map(([growth, states]) => [
+        Plot.axisY({
+          x: 0,
+          ticks: states.map((d) => d.State),
+          tickSize: 0,
+          anchor: growth ? "left" : "right"
+        })
+      ]),
+    Plot.axisX({anchor: "top", label: "← dependent · subjective assessment of abilities · self-sufficient →", labelAnchor: "center", ticks: []}),
+    Plot.ruleX([0])
+  ]
+})
+))
+}});
+
+define({id: "d6a7094e", mode: "inline", inputs: ["renderKeyPointList","strengthKeyPoints","display"], body: async (renderKeyPointList,strengthKeyPoints,display) => {
+display(await(
+renderKeyPointList(strengthKeyPoints)
+))
+}});
+
+define({id: "c18551c2", outputs: ["motivationKeyPoints"], body: () => {
+  const motivationKeyPoints = ['There is a big room to motivate me to do my work better, which allows a flexible approach for efficiency optimization']
+
+return {motivationKeyPoints};
+}});
+
+define({id: "2a46d5d9", outputs: ["motivationList","motivation"], body: () => {
+const motivationList = [ 
+  {name:'Innovation environment', rank: 1},
+  {name:'Impactful work', rank: 2},
+  {name:'Challenging projects', rank: 3},
+  {name:'Be focused on what matters', rank: 4},
+  {name:'Autonomy and responsibility', rank: 5},
+  {name:'Work-Life Balance', rank: 6}
+   ]
+const motivation = motivationList.map(el => ({
+    start:-10 * (7 - el.rank),
+    end:10 * (7 - el.rank),
+    type: el.name
+}))
+return {motivationList,motivation};
+}});
+
+define({id: "fdf40266", inputs: ["display","Plot","motivation"], body: (display,Plot,motivation) => {
+display(
+Plot.plot({
+  marginLeft: 130,
+  axis: null,
+  color: {
+    type: "categorical",
+    scheme: "Dark2"
+  },
+  marks: [
+    Plot.barX(motivation, {
+      x1: "start",
+      x2: "end",
+      y: "type",
+      sort: {y: "x2" },
+      fill: "type"
+    }),
+    Plot.text(motivation, {
+      x: 0,
+      y: "type",
+      text: "type",
+      textAnchor: "middle",
+    })
+  ]
+})
+)
+}});
+
+define({id: "e1afa2b5", mode: "inline", inputs: ["renderKeyPointList","motivationKeyPoints","display"], body: async (renderKeyPointList,motivationKeyPoints,display) => {
+display(await(
+renderKeyPointList(motivationKeyPoints)
+))
+}});
+
+define({id: "7e489ae7", mode: "jsx", inputs: ["display"], outputs: ["jsx","Feedback"], body: async (display) => {
+const [{jsx}, {Feedback}] = await Promise.all([import("./_npm/react@19.1.0/jsx-runtime.2a823644.js"), import("./_import/components/Feedback.32e3b5f1.js")]);
+display(/* @__PURE__ */ jsx(Feedback, {}));
+return {jsx,Feedback};
+}});
+
+</script>
+</head>
+<body>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">Yugin Dmitriy</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link observablehq-link-active"><a href="./experience">Experience overview</a></li>
+  </ol>
+  <details>
+    <summary>Case studies</summary>
+    <ol>
+    <li class="observablehq-link"><a href="./customer-journey/customer-experience-journey-mapping">Customer journey mapping</a></li>
+    <li class="observablehq-link"><a href="./data-engineer/marketing-data-engineering">Marketing data engineering</a></li>
+    <li class="observablehq-link"><a href="./pbi/google-trends-reporting">Power BI Google Trends reporting</a></li>
+    <li class="observablehq-link"><a href="./conversion-optimisation/by-audience-segmentation">Conversion Optimisation</a></li>
+    </ol>
+  </details>
+  <details>
+    <summary>Solutions</summary>
+    <ol>
+    <li class="observablehq-link"><a href="./solutions/develop-gtm-variable-tag-templates">Develop GTM variable tag templates</a></li>
+    <li class="observablehq-link"><a href="./solutions/aws-data-warehouse">AWS data warehouse</a></li>
+    </ol>
+  </details>
+  <details>
+    <summary>New</summary>
+    <ol>
+    <li class="observablehq-link"><a href="./trends/marketing-analytics-trends-13">marketing trends 13 </a></li>
+    <li class="observablehq-link"><a href="./news-review/data-analytics-and-marketing-news-13">13 week news recap</a></li>
+    <li class="observablehq-link"><a href="./news-review/data-analytics-and-marketing-12-2025">12 week news recap</a></li>
+    <li class="observablehq-link"><a href="./news-review/data-analytics-and-marketing-11-2025">11 week news recap</a></li>
+    <li class="observablehq-link"><a href="./news-review/data-analytics-and-marketing-10-2025">10 week news recap</a></li>
+    <li class="observablehq-link"><a href="./new/google-tag-manger-template-in-gallery">GTM template variable in gallery</a></li>
+    </ol>
+  </details>
+</nav>
+<script>{const e=document.querySelector("#observablehq-sidebar"),t=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?t.checked=r==="true":t.indeterminate=!0;for(const o of document.querySelectorAll("#observablehq-sidebar summary")){const s=o.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${o.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block"><!--:fbbb8429:--></div>
+<h1 id="experience-overview" tabindex="-1"><a class="observablehq-header-anchor" href="#experience-overview">Experience overview</a></h1>
+<div class="observablehq observablehq--block"><!--:7349aa6b:--></div>
+<div class="grid grid-cols-3">
+  <div class="grid-colspan-2" style="padding: 1rem; align-content: center">
+  <p><i>Hi there! Let's get to know each other better!</i></p>
+  <p>I hope the information presented here will serve as a good foundation for our next conversation. I have separated it into several blocks to showcase my experience through time, projects, teams, and challenges. I realize that I should be concise and not write too much, which may lead to clarification questions that I will be happy to answer. And don't forget to share your feedback. Cheers!</p>
+  <p>My career path in data engineering and data analysis began more than 10 years ago. These years have been filled with challenging tasks, "aha" moments, learning new technologies and techniques and discovering new ways to turn data into ideas and action plans. And I'm not going to stop. I'm absolutely sure that in the coming years, I will help companies and teams uncover hidden insights and explore new ways to achieve peak performance</p>
+  </div>
+  <div class="card" style="padding: 1rem; align-content: center"><observablehq-loading></observablehq-loading><!--:e61bd1de:--></div>
+</div>
+<h2 id="education-and-work" tabindex="-1"><a class="observablehq-header-anchor" href="#education-and-work">Education &amp; Work</a></h2>
+<div class="observablehq observablehq--block"><!--:2ec88a72:--></div>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:b5b13250:--></div>
+<details id="education-and-work-tkw" style="margin:1rem;cursor: pointer;">
+  <summary>What are key points?</summary>
+    <observablehq-loading></observablehq-loading><!--:04dd286a:-->
+</details>
+<h2 id="tools-and-skills" tabindex="-1"><a class="observablehq-header-anchor" href="#tools-and-skills">Tools &amp; Skills</a></h2>
+<div class="observablehq observablehq--block"><!--:372c0c87:--></div>
+<div class="observablehq observablehq--block"><!--:6ce51756:--></div>
+<div class="observablehq observablehq--block"><!--:b91c2eb4:--></div>
+<div class="observablehq observablehq--block"><!--:ae9e34f3:--></div>
+<div class="grid grid-cols-2">
+<div class="card" style="background-color:#c3c3c3; text-align: center">
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:89ad20b8:--></div>
+</div>
+  <div style="align-content: center">
+  <p><b>Core</b> - confident level, able to maintain current projects and easily start new ones</p>
+  <p><b>Supportive</b> - decent level without deep diving into details</p>
+  <p><b>Advantage</b> - can be considered as an opportunity to implement new approaches</p>
+  <p><b>Emerging</b> - less confident but very promising</p>
+  </div>
+</div>
+<details id="tools-and-skils-tkw" style="margin:1rem;cursor: pointer;">
+  <summary>What are key points?</summary>
+    <observablehq-loading></observablehq-loading><!--:fb2f4fde:-->
+</details>
+<h2 id="achievements-and-challenges" tabindex="-1"><a class="observablehq-header-anchor" href="#achievements-and-challenges">Achievements &amp; Challenges</a></h2>
+<div class="observablehq observablehq--block"><!--:96dc2ed1:--></div>
+<div class="observablehq observablehq--block"><!--:04d0ddd0:--></div>
+<div class="grid grid-cols-2">
+  <div style="padding: 1rem; align-content: center">
+    <h4>Conversion optimization framework</h4>
+    <p>Developed a system that supports the marketing and development teams in making data-driven decisions to improve checkout forms, product pages, and category pages.</p>
+    <ul>
+      <li>Design user segment-based calculations</li>
+      <li>Design and implement tracking tags via GTM</li>
+      <li>Create ETL process using Google Analytics and BigQuery</li>
+      <li>Develop dashboards to evaluate A/B test results in order to KPI</li>
+    </ul>
+  </div>
+  <div style="align-content: center">
+    <div style="display:inline-block"><observablehq-loading></observablehq-loading><!--:c0a81d99:-->
+    </div>
+        <div style="display:inline-block"><observablehq-loading></observablehq-loading><!--:b08f8f04:-->
+    </div>
+        <div style="display:inline-block"><observablehq-loading></observablehq-loading><!--:70fa4a75:-->
+    </div>
+  </div>
+</div>
+<div class="grid grid-cols-2">
+  <div style="padding: 1rem; align-content: center">
+    <h4>User experience improvement</h4>
+    <p>Designed and implemented a GTM-based website and application user behavior tracking system to help the content and design teams make data-driven decisions regarding user content interaction to improve user experience, build trust, and loyalty.</p>
+    <ul>
+      <li>Provided customer engagement reports using ADS DATAHUB and GA</li>
+      <li>Designed and implemented event tracking map architecture for GTM</li>
+      <li>Built BigQuery + DATAHUB user engagement datamarts</li>
+      <li>Developed dashboards to track KPIs in Looker and Power BI</li>
+    </ul>
+  </div>
+  <div style="align-content: center">
+    <div style="display:inline-block"><observablehq-loading></observablehq-loading><!--:5b335b04:-->
+    </div>
+    <div style="display:inline-block"><observablehq-loading></observablehq-loading><!--:fcb043d9:-->
+    </div>
+    <div style="display:inline-block"><observablehq-loading></observablehq-loading><!--:225d399c:-->
+    </div>
+  </div>
+</div>
+<div class="grid grid-cols-2">
+  <div style="padding: 1rem; align-content: center">
+    <h4>Product launch performance</h4>
+    <p>Responsible for performance tracking during the launch of a subscription-based product to provide insights to the product owner.</p>
+    <ul>
+      <li>Design system of KPIs, necessary tracking metrics, and attribution model</li>
+      <li>Implement tracking code with JavaScript</li>
+      <li>Build cloud-based DWH to collect and analyze data from CRM and BigQuery</li>
+      <li>Develop data pipelines and automation using GCP functions</li>
+      <li>Develop dashboards to track KPIs in Looker and Power BI</li>
+    </ul>
+  </div>
+  <div style="align-content: center">
+    <div style="display:inline-block"><observablehq-loading></observablehq-loading><!--:b8eda615:-->
+    </div>
+    <div style="display:inline-block"><observablehq-loading></observablehq-loading><!--:3138d780:-->
+    </div>
+    <div style="display:inline-block"><observablehq-loading></observablehq-loading><!--:e3b03617:-->
+    </div>
+  </div>
+</div>
+<details id="achievments-tkw" style="margin:1rem;cursor: pointer;">
+  <summary>What are key points?</summary>
+    <observablehq-loading></observablehq-loading><!--:ba18b10b:-->
+</details>
+<hr>
+<div class="observablehq observablehq--block"><!--:8f1b18ec:--></div>
+<div class="grid grid-cols-2">
+  <div style="padding: 1rem; align-content: center">
+    <h4>Rebuild GCP-based DWH to ClickHouse</h4>
+    <p>Due to sanction pressure in 2022, keeping the DWH based on Google services was highly risky due to the potential for service blocks.</p>
+    <p>To overcome this challenge, I initiated a transition project where I served as the leader. I developed an architectural solution that gradually replaced the current data pipelines with new ones based on ClickHouse. Together with team managers, we broke the project into small tasks and created a realistic timeline to achieve the project objectives.</p>
+  </div>
+  <div class="card" style="align-content: center;text-align: center">
+    <observablehq-loading></observablehq-loading><!--:98dd8821:-->
+  </div>
+</div>
+<div class="grid grid-cols-2">
+  <div style="padding: 1rem; align-content: center">
+    <h4>Converting Excel Reports to Power BI</h4>
+    <p>Updating time consumes days, report data often do not match, continuous Excel file errors occur due to data processing limits, and improving reports takes months. These are typical problems of reporting built on Excel.</p>
+    <p>To address these issues while maintaining current reporting, I began converting the more problematic reports to the Power BI ecosystem. This approach preserved existing reports, improved maintenance, and created opportunities for future reporting development.</p>
+  </div>
+  <div class="card" style="align-content: center;text-align: center">
+    <observablehq-loading></observablehq-loading><!--:c29ffec2:-->
+  </div>
+</div>
+<details id="challenges-tkw" style="margin:1rem;cursor: pointer;">
+  <summary>What are key points?</summary>
+    <observablehq-loading></observablehq-loading><!--:414e704d:-->
+</details>
+<h2 id="strengths-and-weaknesses" tabindex="-1"><a class="observablehq-header-anchor" href="#strengths-and-weaknesses">Strengths And Weaknesses</a></h2>
+<div class="observablehq observablehq--block"><!--:35a9c8ed:--></div>
+<p>From my point of view, talking about strengths and weaknesses is not representative. First, nobody wants to demonstrate weaknesses. Second, strengths can come across as showing off. Eventually, it can be misleading to understand what a person can bring to the company and what support they need to work efficiently. Therefore, I have replaced it with two characteristics that can be more informative:</p>
+<ul>
+<li><s>Strengths</s> Self-sufficiency</li>
+<li><s>Weeknesses</s> Dependency</li>
+</ul>
+<div class="observablehq observablehq--block"><!--:a6b91269:--></div>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:ebac0ada:--></div>
+<details id="strengths-tkw" style="margin:1rem;cursor: pointer;">
+  <summary>What are key points?</summary>
+    <observablehq-loading></observablehq-loading><!--:d6a7094e:-->
+</details>
+<h2 id="motivation" tabindex="-1"><a class="observablehq-header-anchor" href="#motivation">Motivation</a></h2>
+<div class="observablehq observablehq--block"><!--:c18551c2:--></div>
+<div class="observablehq observablehq--block"><!--:2a46d5d9:--></div>
+<p>Here, I wanted to indicate what can make me even more efficient at work. These conditions help me spend more time on what really matters without distractions and allow me to stay focused and energetic during work hours.</p>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:fdf40266:--></div>
+<details id="motivation-tkw" style="margin:1rem;cursor: pointer;">
+  <summary>What are key points?</summary>
+    <observablehq-loading></observablehq-loading><!--:e1afa2b5:-->
+</details>
+<h2 id="summary" tabindex="-1"><a class="observablehq-header-anchor" href="#summary">Summary</a></h2>
+<p>Looking back at my experience and knowledge, I can confidently say that I possess strong abilities and skills that make me flexible enough to build entire analytical applications independently of the initial tool stack. My background in understanding user behavior, combined with my understanding of business needs, reveals the high potential hidden behind data. I can become a valuable part of your team and organization and contribute all my efforts to benefit the company if I am able to act self-sufficiently and be responsible for results. However, I count on you to help me with managing expectations and relationship management.</p>
+<h2 id="feedback" tabindex="-1"><a class="observablehq-header-anchor" href="#feedback">Feedback</a></h2>
+<div class="observablehq observablehq--block"><!--:7e489ae7:--></div>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="./"><span>Yugin Dmitriy</span></a><a rel="next" href="./customer-journey/customer-experience-journey-mapping"><span>Customer journey mapping</span></a></nav>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2025-04-05T12:03:14">Apr 5, 2025</a>.</div>
+</footer>
+</div>
+</body>
+</html>

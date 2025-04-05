@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.0">
+<title>marketing data warehouse engineering | Yugin Dmitriy</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="../_observablehq/theme-air,near-midnight.dcdbf18e.css">
+<link rel="preload" as="style" href="../_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="../_observablehq/theme-air,near-midnight.dcdbf18e.css">
+<link rel="stylesheet" type="text/css" href="../_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="modulepreload" href="../_observablehq/client.ba604ce8.js">
+<link rel="modulepreload" href="../_observablehq/runtime.9393ab6d.js">
+<link rel="modulepreload" href="../_observablehq/stdlib.55124be9.js">
+<link rel="modulepreload" href="../_npm/d3@7.9.0/e780feca.js">
+<link rel="modulepreload" href="../_observablehq/stdlib/inputs.c3b3de1a.js">
+<link rel="modulepreload" href="../_observablehq/stdlib/mermaid.2bd94947.js">
+<link rel="modulepreload" href="../_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="../_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="../_npm/mermaid@11.6.0/dist/mermaid.esm.min.mjs.865ecc3a.js">
+<link rel="modulepreload" href="../_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="../_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="../_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="../_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="../_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="../_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="../_npm/d3-delaunay@6.0.4/5ced1d52.js">
+<link rel="modulepreload" href="../_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="../_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="../_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="../_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="../_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="../_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="../_npm/d3-format@3.1.0/86074ef6.js">
+<link rel="modulepreload" href="../_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="../_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="../_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="../_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="../_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="../_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="../_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="../_npm/d3-scale@4.0.2/843b6a76.js">
+<link rel="modulepreload" href="../_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="../_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="../_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="../_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="../_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="../_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="../_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="../_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="../_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="../_npm/delaunator@5.0.1/02d43215.js">
+<link rel="modulepreload" href="../_npm/robust-predicates@3.0.2/aa00730b.js">
+
+    <meta name="keywords" content="fundamentals of data engineering, cloud data engineering for dummies, data engineering with python, data engineering fundamentals, data engineering with aws, fundamental of data engineering, aws services for data engineering, sql for data engineering, data engineering pipeline, data engineering principles, data engineering aws, learning data engineering, data engineering company, data engineering on aws, about data engineering">
+    <meta name="description" content="Learn fundamentals of engineering marketing datawarehouse AWS">
+    <meta name="author" content="Yugin Dmitriy">
+    <link rel="icon" href="../_file/web-analyst.21c0b145.ico" type="image/png" sizes="48x48">
+  <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M282T4N');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="google-site-verification" content="SnaMInDF57_RYreZY9l7S1zwVfZSGmcLEV421Ohkl_g">
+  <meta name="msvalidate.01" content="DEA98ACCD6D8E6BB2DF43CD0031A6E00">
+    
+<script type="module">
+
+import {define} from "../_observablehq/client.ba604ce8.js";
+
+define({id: "6d8d6dc5", inputs: ["mermaid","display"], body: async (mermaid,display) => {
+display(await(
+await mermaid`flowchart LR
+    report1(((Report by SH 1)))
+    report2(((Report by SH 2)))
+    report3(((Report by SH 3)))
+
+    fb{{Facebook}}
+    ga4{{Google Analytics}}
+    sfy{{Shopify}}
+
+    etlpbi([Power BI ETL])
+    etlexc([Excel ETL])
+    etlsfy([Shopify ETL])
+
+
+fb --> etlexc 
+ga4 --> etlexc 
+sfy --> etlexc 
+etlexc --> report1
+fb --> etlpbi
+ga4 --> etlpbi
+sfy --> etlpbi 
+fb --> shpf
+ga4 --> shpf
+etlpbi --> report2
+    subgraph shpf [SAAS integrated reporting]
+    direction TB
+    sfy --> etlsfy 
+    end
+etlsfy --> report3
+report1 x--x report2 x--x report3`
+))
+}});
+
+define({id: "83e5e098", inputs: ["mermaid","display"], body: async (mermaid,display) => {
+display(await(
+await mermaid`flowchart LR
+    report1(((Report by SH 1)))
+    report2(((Report by SH 2)))
+    report3(((Report by SH 3)))
+
+    fb{{Facebook}}
+    ga4{{Google Analytics}}
+    sfy{{Shopify}}
+
+    etlcloud[[AWS Cloud ETL]]
+    etlpbi([Power BI ETL])
+    etlsfy([Excel ETL])
+
+
+fb --> etlcloud --> etlpbi
+ga4 --> etlcloud --> etlsfy
+sfy --> etlcloud --> consise
+    subgraph consise [Cohesive reporting]
+    direction RL
+    report1 <--> report2 <--> report3
+    end
+`
+))
+}});
+
+define({id: "125483d5", inputs: ["mermaid","display"], body: async (mermaid,display) => {
+display(await(
+await mermaid`flowchart LR
+    fb{{Facebook}}
+    ga4{{Google Analytics}}
+    sfy{{Shopify}}
+
+    lfi[[Lambda functions Ingestions]]
+    lfd[[Lambda functions DUCK DB]]
+    rl[[RAW]]
+    el[[EXTRACTED]]
+    dm[[DATAMART]]
+
+    fb-->lfi
+    ga4-->lfi
+    sfy-->lfi
+
+    subgraph aws [AWS Cloud ETL]
+        lfi-->rl
+        lfd-->s3
+        subgraph s3 [S3 file storage]
+            direction TB
+            rl--"**DUCK DB**"-->el--"**DUCK DB**"-->dm
+        end
+    end`
+))
+}});
+
+define({id: "168b21d0", inputs: ["view","Inputs","d3"], outputs: ["fakeDatamart"], body: async (view,Inputs,d3) => {
+    const fakeDatamart = view(Inputs.table(await d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTc26cIfILij4WUX9yF4070HAflKpxLqHJajwlnUpkpgp5zyCUkYhqZeKYOg84G8X-K7Ba1hZK9yon_/pub?gid=517560441&single=true&output=csv')))
+
+return {fakeDatamart};
+}});
+
+</script>
+</head>
+<body>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="../">Yugin Dmitriy</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="../experience">Experience overview</a></li>
+  </ol>
+  <details open class="observablehq-section-active">
+    <summary>Case studies</summary>
+    <ol>
+    <li class="observablehq-link"><a href="../customer-journey/customer-experience-journey-mapping">Customer journey mapping</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./marketing-data-engineering">Marketing data engineering</a></li>
+    <li class="observablehq-link"><a href="../pbi/google-trends-reporting">Power BI Google Trends reporting</a></li>
+    <li class="observablehq-link"><a href="../conversion-optimisation/by-audience-segmentation">Conversion Optimisation</a></li>
+    </ol>
+  </details>
+  <details>
+    <summary>Solutions</summary>
+    <ol>
+    <li class="observablehq-link"><a href="../solutions/develop-gtm-variable-tag-templates">Develop GTM variable tag templates</a></li>
+    <li class="observablehq-link"><a href="../solutions/aws-data-warehouse">AWS data warehouse</a></li>
+    </ol>
+  </details>
+  <details>
+    <summary>New</summary>
+    <ol>
+    <li class="observablehq-link"><a href="../trends/marketing-analytics-trends-13">marketing trends 13 </a></li>
+    <li class="observablehq-link"><a href="../news-review/data-analytics-and-marketing-news-13">13 week news recap</a></li>
+    <li class="observablehq-link"><a href="../news-review/data-analytics-and-marketing-12-2025">12 week news recap</a></li>
+    <li class="observablehq-link"><a href="../news-review/data-analytics-and-marketing-11-2025">11 week news recap</a></li>
+    <li class="observablehq-link"><a href="../news-review/data-analytics-and-marketing-10-2025">10 week news recap</a></li>
+    <li class="observablehq-link"><a href="../new/google-tag-manger-template-in-gallery">GTM template variable in gallery</a></li>
+    </ol>
+  </details>
+</nav>
+<script>{const e=document.querySelector("#observablehq-sidebar"),t=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?t.checked=r==="true":t.indeterminate=!0;for(const o of document.querySelectorAll("#observablehq-sidebar summary")){const s=o.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${o.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
+<nav>
+<div>Contents</div>
+<ol>
+<li class="observablehq-secondary-link"><a href="#dataflow-process-overview">Dataflow process overview</a></li>
+<li class="observablehq-secondary-link"><a href="#implementation-architecture">Implementation Architecture</a></li>
+<li class="observablehq-secondary-link"><a href="#results-and-benefits">Results and Benefits</a></li>
+<li class="observablehq-secondary-link"><a href="#summary">Summary</a></li>
+</ol>
+</nav>
+</aside>
+<main id="observablehq-main" class="observablehq">
+<h1 id="case-study-marketing-data-warehouse-engineering" tabindex="-1"><a class="observablehq-header-anchor" href="#case-study-marketing-data-warehouse-engineering">Case Study: Marketing Data Warehouse Engineering</a></h1>
+<h2 id="case-problem-overview" tabindex="-1"><a class="observablehq-header-anchor" href="#case-problem-overview">Case Problem Overview</a></h2>
+<p>In the fast-paced world of digital marketing, companies often struggle with managing and engineering data pipelines from various sources. Traditional data warehouses, even cloud-based ones, can be expensive and complex to maintain, leading to significantly higher costs on equipment and salaries.</p>
+<p>Stakeholders from various teams like marketing, accounting, product, and development need comprehensive data from websites, ad systems, and CRM to build their own dashboards and reports to present performance results to the company board. However, they might not be familiar with the fundamentals of data engineering or have read "Data Engineering for Dummies." As a result, each report may have significantly different results because they lack a single source of truth, and each stakeholder makes their own calculations without considering the data engineering processes of their colleagues. This leads to final reports having controversial numbers that can feel unprofessional and provide misleading information.</p>
+<p>The challenge is to create a cost-effective, scalable, and easy-to-maintain data warehouse solution that can handle marketing data from GA4, Facebook ADS, and Shopify efficiently and provide a single source of truth for all stakeholders based on data engineering principles.</p>
+<h2 id="dataflow-process-overview" tabindex="-1"><a class="observablehq-header-anchor" href="#dataflow-process-overview">Dataflow process overview</a></h2>
+<p>Company growth is not a linear, well-controlled process. Many services will arrive and many will be phased out as the company evolves. This constant change can lead to challenges in maintaining a cohesive and integrated data engineering infrastructure. New tools and platforms may be adopted to meet emerging needs without concern about data engineering principles. This dynamic environment requires a flexible and scalable data engineering pipeline architecture that can adapt to the ever-changing landscape of company requirements.</p>
+<p>However, violating the fundamentals of data engineering principles can lead to the creation of data silos, where information is isolated within different systems and departments. These silos prevent seamless data integration and hinder the ability to gain comprehensive insights. Consequently, the lack of a unified data view can slow down decision-making processes and impede further growth, as stakeholders struggle to access and analyze the data they need efficiently.</p>
+<h3 id="as-is-process" tabindex="-1"><a class="observablehq-header-anchor" href="#as-is-process">As-Is Process</a></h3>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:6d8d6dc5:--></div>
+<p>The graph illustrates the common problem of data silos, where multiple services such as Facebook, Google Analytics, and Shopify are connected to different ETL(Extract Transform Load fundamental of data engineering) processes and reporting tools. The more connections and services involved in the graph, the greater the complexity and potential for data inconsistencies, leading to fragmented and unreliable reports. This fragmentation makes it challenging to maintain a single source of truth, causing discrepancies and inefficiencies in data analysis and decision-making.</p>
+<h3 id="to-be-process" tabindex="-1"><a class="observablehq-header-anchor" href="#to-be-process">To-Be Process</a></h3>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:83e5e098:--></div>
+<p>The approach involves identifying shared functionalities among various services and creating a unified pipeline instead of maintaining multiple parallel processes. By analyzing the common characteristics and data processing requirements of services like Facebook ADS, Google Analytics, and Shopify, a single, streamlined ETL pipeline can be engineered. This unified process reduces redundancy, minimizes data silos, and ensures consistency across reports, ultimately providing a single source of truth for all stakeholders.</p>
+<h2 id="implementation-architecture" tabindex="-1"><a class="observablehq-header-anchor" href="#implementation-architecture">Implementation Architecture</a></h2>
+<p>The detailed data engineering with AWS graph leverages cutting-edge services such as serverless AWS Lambda functions and the in-memory DuckDB database to create a scalable data pipeline. The process begins with AWS Lambda functions ingesting data from various sources like Facebook, Google Analytics, and Shopify. These functions then store the raw data in Amazon S3. The raw data is processed and transformed using additional Lambda functions, which load the data into DuckDB for further analysis. DuckDB, running directly on S3 data, provides a lightweight and efficient database engine capable of performing complex queries and transformations in-memory. This data engineering solution ensures that data pipelines are processed quickly and efficiently, with minimal latency and overhead. The final processed data is stored in a datamart within S3, ready for analysis and reporting by any company department. This serverless data engineering with AWS not only reduces costs by eliminating the need for dedicated servers but also scales automatically with the volume of data, providing a robust and flexible solution for marketing data engineering.</p>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:125483d5:--></div>
+<p>The key advantage of this engineering lies in the use of two types of functions that are easy to scale, update, and schedule. The first type connects to APIs and collects data on a daily basis. The second type is responsible for ETL transformations and can be easily controlled by running code from a Git repository.</p>
+<p><code>Facebook ADS API cost data ingestion function example</code></p>
+<pre><code>//the code be easaly translated if data engineering process created with python
+const AWS = require('aws-sdk');
+const fetch = require('node-fetch');
+const fs = require('fs');
+const path = require('path');
+
+// Configure AWS SDK
+AWS.config.update({ region: 'us-east-1' });
+const s3 = new AWS.S3();
+
+// Facebook Ads API credentials
+const accessToken = 'YOUR_FACEBOOK_ACCESS_TOKEN';
+const adAccountId = 'YOUR_AD_ACCOUNT_ID';
+
+// Function to fetch cost data from Facebook Ads API
+async function fetchFacebookAdsCostData() {
+    const url = `https://graph.facebook.com/v12.0/act_${adAccountId}/insights?fields=spend&amp;access_token=${accessToken}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+}
+
+// Function to upload file to S3
+async function uploadFileToS3(filePath, bucketName, key) {
+    const fileContent = fs.readFileSync(filePath);
+    const params = {
+        Bucket: bucketName,
+        Key: key,
+        Body: fileContent
+    };
+    await s3.upload(params).promise();
+    console.log(`File uploaded successfully at https://s3.amazonaws.com/${bucketName}/${key}`);
+}
+
+// Main function
+(async () =&gt; {
+    try {
+        const data = await fetchFacebookAdsCostData();
+        const filePath = path.join(__dirname, 'facebook_ads_cost_data.json');
+        fs.writeFileSync(filePath, JSON.stringify(data));
+
+        const bucketName = 'YOUR_S3_BUCKET_NAME';
+        const key = 'facebook_ads_cost_data.json';
+        await uploadFileToS3(filePath, bucketName, key);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+})();
+</code></pre>
+<p><code>DuckDB instance with connection to S3 raw data from Facebook API, extracting fields date and cost, aggregating by date, and storing it as a new file in S3 extracted layer</code></p>
+<pre><code>//the code be easaly translated if data engineering process created with python
+const AWS = require('aws-sdk');
+const fetch = require('node-fetch');
+const fs = require('fs');
+const path = require('path');
+const duckdb = require('duckdb');
+
+// Configure AWS SDK
+AWS.config.update({ region: 'us-east-1' });
+const s3 = new AWS.S3();
+
+// Facebook Ads API credentials
+const accessToken = 'YOUR_FACEBOOK_ACCESS_TOKEN';
+const adAccountId = 'YOUR_AD_ACCOUNT_ID';
+
+// Function to fetch cost data from Facebook Ads API
+async function fetchFacebookAdsCostData() {
+    const url = `https://graph.facebook.com/v12.0/act_${adAccountId}/insights?fields=date_start,date_stop,spend&amp;access_token=${accessToken}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    return data.data;
+}
+
+// Function to upload file to S3
+async function uploadFileToS3(filePath, bucketName, key) {
+    const fileContent = fs.readFileSync(filePath);
+    const params = {
+        Bucket: bucketName,
+        Key: key,
+        Body: fileContent
+    };
+    await s3.upload(params).promise();
+    console.log(`File uploaded successfully at https://s3.amazonaws.com/${bucketName}/${key}`);
+}
+
+// Main function
+(async () =&gt; {
+    try {
+        const data = await fetchFacebookAdsCostData();
+        const rawFilePath = path.join(__dirname, 'facebook_ads_raw_data.json');
+        fs.writeFileSync(rawFilePath, JSON.stringify(data));
+
+        const bucketName = 'YOUR_S3_BUCKET_NAME';
+        const rawKey = 'raw/facebook_ads_raw_data.json';
+        await uploadFileToS3(rawFilePath, bucketName, rawKey);
+
+        // Connect to DuckDB and load data from S3
+        const db = new duckdb.Database(':memory:');
+        const connection = db.connect();
+        connection.run(`INSTALL httpfs; LOAD httpfs; SET s3_region='us-east-1'; SET s3_access_key_id='YOUR_AWS_ACCESS_KEY'; SET s3_secret_access_key='YOUR_AWS_SECRET_KEY';`);
+        connection.run(`CREATE TABLE raw_data AS SELECT * FROM read_json_auto('s3://${bucketName}/${rawKey}');`);
+
+        // Aggregate data by date
+        const result = connection.all(`SELECT date_start AS date, SUM(spend) AS cost FROM raw_data GROUP BY date_start;`);
+
+        // Save aggregated data to a new file
+        const extractedFilePath = path.join(__dirname, 'facebook_ads_extracted_data.json');
+        fs.writeFileSync(extractedFilePath, JSON.stringify(result));
+
+        const extractedKey = 'extracted/facebook_ads_extracted_data.json';
+        await uploadFileToS3(extractedFilePath, bucketName, extractedKey);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+})();
+</code></pre>
+<h2 id="results-and-benefits" tabindex="-1"><a class="observablehq-header-anchor" href="#results-and-benefits">Results and Benefits</a></h2>
+<p>By implementing this data architecture, the outcomes are denormalized datamarts that are efficiently stored in the S3 cloud. These datamarts can be easily connected with various visualization tools such as Power BI, Looker, and even Excel. The denormalized structure ensures that data is readily available for analysis and reporting, providing a seamless experience and coherent results for stakeholders from deferent teams or even department.</p>
+<p>Here is an example of a CSV data mart file stored in S3 cloud storage. This file contains aggregated marketing data that can be used for analysis and reporting.</p>
+<div class="observablehq observablehq--block"><!--:168b21d0:--></div>
+<p>By providing a comprehensive table that contains all the necessary information, independent stakeholders from the marketing, product, accounting, or developers team can craft their own reports while maintaining consistency. This unified table ensures that all reports are based on the same data source, eliminating discrepancies and fostering a coherent understanding across different departments. As a result, stakeholders can generate accurate and professional reports that align with the overall objectives and insights derived from a single, reliable data set.</p>
+<p>This architecture also offers significant benefits in terms of automation and maintenance. By leveraging serverless AWS Lambda functions, the entire data processing pipeline can be automated, reducing the need for manual intervention and minimizing the risk of human error. Scheduled Lambda functions can handle data ingestion, transformation, and loading processes seamlessly, ensuring that data is always up-to-date and ready for analysis. Additionally, the use of infrastructure-as-code practices allows for easy updates and maintenance of the data pipeline, enabling quick adjustments to changing business requirements without disrupting the overall workflow. This automated and maintainable approach ensures a reliable and efficient data processing system that can adapt to the evolving needs of the organization.</p>
+<table>
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Cost-Effective</td>
+            <td>
+                <ul>
+                    <li><strong>AWS Lambda</strong>: Serverless architecture reduces costs by only charging for actual compute time.</li>
+                    <li><strong>Amazon S3</strong>: Cost-effective storage solution for large volumes of data.</li>
+                    <li><strong>DuckDB</strong>: Lightweight and efficient database engine that can run directly on S3 data.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Scalability</td>
+            <td>
+                <ul>
+                    <li><strong>AWS Lambda</strong>: Automatically scales with the volume of data and processing needs.</li>
+                    <li><strong>Amazon S3</strong>: Virtually unlimited storage capacity.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Simplicity</td>
+            <td>
+                <ul>
+                    <li><strong>Serverless</strong>: No need to manage servers or infrastructure.</li>
+                    <li><strong>DuckDB</strong>: Simple integration with S3 and easy to use SQL interface.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Ingestion</td>
+            <td>
+                <ul>
+                    <li><strong>AWS Lambda</strong> functions to process incoming marketing data from various sources (e.g., social media, email campaigns, web analytics).</li>
+                    <li><strong>Amazon S3</strong> buckets to store raw and processed data.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Processing</td>
+            <td>
+                <ul>
+                    <li><strong>AWS Lambda</strong> functions to transform and clean data.</li>
+                    <li><strong>DuckDB</strong> to query and analyze data directly from S3.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Storage</td>
+            <td>
+                <ul>
+                    <li><strong>Amazon S3</strong> for storing raw, processed, and aggregated data.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Analysis</td>
+            <td>
+                <ul>
+                    <li><strong>DuckDB</strong> for running SQL queries on data stored in S3.</li>
+                    <li>Integration with BI tools for visualization and reporting.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Cost Savings</td>
+            <td>
+                <ul>
+                    <li>Significant reduction in infrastructure and maintenance costs.</li>
+                    <li>Pay-as-you-go pricing model with AWS services.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Improved Performance</td>
+            <td>
+                <ul>
+                    <li>Faster data processing and querying with serverless architecture and DuckDB.</li>
+                    <li>Scalable solution that can handle increasing data volumes without performance degradation.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Ease of Use</td>
+            <td>
+                <ul>
+                    <li>Simplified data pipeline with minimal management overhead.</li>
+                    <li>Easy integration with existing marketing tools and platforms.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Enhanced Insights</td>
+            <td>
+                <ul>
+                    <li>Ability to quickly analyze and visualize marketing data.</li>
+                    <li>Improved decision-making with timely and accurate data insights.</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h2 id="summary" tabindex="-1"><a class="observablehq-header-anchor" href="#summary">Summary</a></h2>
+<p>This data engineering case study explores the challenges and solutions for marketing data warehouse engineering in a dynamic business environment. Traditional data warehouses are often costly and complex, making it difficult for small to medium-sized businesses to manage and analyze large volumes of data from various sources effectively. The proposed engineering solution involves creating a cost-effective, scalable, and easy-to-maintain data warehouse using serverless AWS Lambda services and the in-memory DuckDB database.</p>
+<table>
+    <thead>
+        <tr>
+            <th>Summary of Key Points</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Case Problem Overview</td>
+            <td>
+                <ul>
+                    <li>Companies struggle with managing and analyzing large volumes of marketing data.</li>
+                    <li>Traditional data warehouses are expensive and complex.</li>
+                    <li>Stakeholders need a single source of truth to avoid discrepancies in reports.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Dataflow Process Overview</td>
+            <td>
+                <ul>
+                    <li>Business growth leads to data silos and integration challenges.</li>
+                    <li>A unified data architecture is needed to adapt to changing business requirements.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>To-Be Process</td>
+            <td>
+                <ul>
+                    <li>Develop a single, streamlined ETL pipeline to reduce redundancy and ensure consistency.</li>
+                    <li>Use AWS Cloud ETL to integrate data from various sources and provide a single source of truth.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Implementation Architecture</td>
+            <td>
+                <ul>
+                    <li>Use AWS Lambda functions for data ingestion and transformation.</li>
+                    <li>Store raw data in Amazon S3 and process it using DuckDB.</li>
+                    <li>Create a datamart within S3 for analysis and reporting.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Results and Benefits</td>
+            <td>
+                <ul>
+                    <li>Denormalized datamarts stored in S3 can be connected to visualization tools.</li>
+                    <li>Automated and maintainable data processing pipeline.</li>
+                    <li>Cost-effective, scalable, and simple architecture.</li>
+                    <li>Enhanced data analysis and decision-making capabilities.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Recommendations</td>
+            <td>
+                <ul>
+                    <li>Adopt Serverless Architecture: Utilize AWS Lambda functions to reduce costs and simplify management.</li>
+                    <li>Leverage Cloud Storage: Use Amazon S3 for scalable and cost-effective data storage.</li>
+                    <li>Implement Unified ETL Pipeline: Develop a single ETL process to minimize data silos and ensure consistency.</li>
+                    <li>Use In-Memory Database: Employ DuckDB for efficient data processing and querying.</li>
+                    <li>Automate Data Processing: Schedule Lambda functions for seamless data ingestion, transformation, and loading.</li>
+                    <li>Integrate with BI Tools: Connect datamarts to visualization tools for comprehensive data analysis and reporting.</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>By following these recommendations, businesses can create a robust and flexible data warehouse solution that meets their marketing data engineering needs while ensuring cost-effectiveness, scalability, and simplicity.</p>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="../customer-journey/customer-experience-journey-mapping"><span>Customer journey mapping</span></a><a rel="next" href="../pbi/google-trends-reporting"><span>Power BI Google Trends reporting</span></a></nav>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2025-04-05T12:03:14">Apr 5, 2025</a>.</div>
+</footer>
+</div>
+</body>
+</html>

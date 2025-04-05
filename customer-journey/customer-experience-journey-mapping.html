@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.0">
+<title>customer experience journey mapping | Yugin Dmitriy</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="../_observablehq/theme-air,near-midnight.dcdbf18e.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="../_observablehq/theme-air,near-midnight.dcdbf18e.css">
+<link rel="modulepreload" href="../_observablehq/client.ba604ce8.js">
+<link rel="modulepreload" href="../_observablehq/runtime.9393ab6d.js">
+<link rel="modulepreload" href="../_observablehq/stdlib.55124be9.js">
+<link rel="modulepreload" href="../_import/components/trendNumber.d31e6ad4.js">
+<link rel="modulepreload" href="../_import/components/lineChart.e37967f8.js">
+<link rel="modulepreload" href="../_npm/react@19.1.0/jsx-runtime.2a823644.js">
+<link rel="modulepreload" href="../_import/components/Feedback.32e3b5f1.js">
+<link rel="modulepreload" href="../_npm/d3@7.9.0/e780feca.js">
+<link rel="modulepreload" href="../_observablehq/stdlib/duckdb.d51cccc5.js">
+<link rel="modulepreload" href="../_observablehq/stdlib/mermaid.2bd94947.js">
+<link rel="modulepreload" href="../_npm/@observablehq/plot@0.6.17/d761ef9b.js">
+<link rel="modulepreload" href="../_npm/react-dom@19.1.0/ab55ceaa.js">
+<link rel="modulepreload" href="../_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="../_npm/react@19.1.0/c1c75d32.js">
+<link rel="modulepreload" href="../_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="../_npm/@duckdb/duckdb-wasm@1.29.0/36014af5.js">
+<link rel="modulepreload" href="../_npm/mermaid@11.6.0/dist/mermaid.esm.min.mjs.865ecc3a.js">
+<link rel="modulepreload" href="../_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="../_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="../_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="../_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="../_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="../_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="../_npm/d3-delaunay@6.0.4/5ced1d52.js">
+<link rel="modulepreload" href="../_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="../_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="../_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="../_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="../_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="../_npm/d3-format@3.1.0/86074ef6.js">
+<link rel="modulepreload" href="../_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="../_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="../_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="../_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="../_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="../_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="../_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="../_npm/d3-scale@4.0.2/843b6a76.js">
+<link rel="modulepreload" href="../_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="../_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="../_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="../_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="../_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="../_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="../_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="../_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="../_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="../_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="../_npm/apache-arrow@19.0.1/42e4d6a9.js">
+<link rel="modulepreload" href="../_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="../_npm/delaunator@5.0.1/02d43215.js">
+<link rel="modulepreload" href="../_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="../_npm/tslib@2.8.1/b62a9c4a.js">
+<link rel="modulepreload" href="../_npm/flatbuffers@24.12.23/ff64aefa.js">
+<link rel="modulepreload" href="../_npm/robust-predicates@3.0.2/aa00730b.js">
+
+    <meta name="keywords" content="customer experience journey mapping, customer journey mapping process, client journey mapping, customer journey mapping consulting services, customer journey mapping online, digital customer experience journey mapping, user experience journey mapping">
+    <meta name="description" content="Learn how to track the user experience journey and integrate it with the customer journey by mapping each interaction.">
+    <meta name="author" content="Yugin Dmitriy">
+    <link rel="icon" href="../_file/web-analyst.21c0b145.ico" type="image/png" sizes="48x48">
+  <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M282T4N');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="google-site-verification" content="SnaMInDF57_RYreZY9l7S1zwVfZSGmcLEV421Ohkl_g">
+  <meta name="msvalidate.01" content="DEA98ACCD6D8E6BB2DF43CD0031A6E00">
+    
+<script type="module">
+
+import {define} from "../_observablehq/client.ba604ce8.js";
+import {registerFile} from "../_observablehq/stdlib.55124be9.js";
+
+registerFile("../data/funnel.csv", {"name":"../data/funnel.csv","mimeType":"text/csv","path":"../_file/data/funnel.a452cbce.csv","lastModified":1743847371308,"size":194});
+
+define({id: "3035431a", inputs: ["d3","DuckDBClient"], outputs: ["sessions","duration","db"], body: async (d3,DuckDBClient) => {
+const sessions = await d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTc26cIfILij4WUX9yF4070HAflKpxLqHJajwlnUpkpgp5zyCUkYhqZeKYOg84G8X-K7Ba1hZK9yon_/pub?gid=0&single=true&output=csv')
+const duration = await d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTc26cIfILij4WUX9yF4070HAflKpxLqHJajwlnUpkpgp5zyCUkYhqZeKYOg84G8X-K7Ba1hZK9yon_/pub?gid=456732969&single=true&output=csv')
+const db = DuckDBClient.of({s: sessions, sd: duration});
+return {sessions,duration,db};
+}});
+
+define({id: "47de6593", inputs: ["mermaid","display"], body: async (mermaid,display) => {
+display(await(
+await mermaid`graph LR
+A((("Social AD ⓕ")))-..->B((("Product exp page 🚀")))
+B-..->C((("Experience blocks 🤓")))
+C-..->D((("Targeted AD")))
+C-..->F@{ shape: rectangle, label: "Product sale journey"}
+D-..->F`
+))
+}});
+
+define({id: "50c8746e", inputs: ["mermaid","display"], body: async (mermaid,display) => {
+display(await(
+await mermaid`graph LR
+A[UTM get parametrs]-->B@{ shape: docs, label: "Each block is journey point" }-->C[Google Tag Manager]-->D[GA4 events]-->F[Remarketing Audiences]`
+))
+}});
+
+define({id: "69595e24", inputs: ["mermaid","display"], body: async (mermaid,display) => {
+display(await(
+await mermaid`graph LR
+A@{ shape: docs, label: "Block Visibility Trigger" }-->B[GTM GA4 events]-->C@{ shape: braces, label: "block name is journey point" }
+A-->D[GTM audince pixels]-->C`
+))
+}});
+
+define({id: "f93ae33f", inputs: ["db"], outputs: ["summary","summary1"], body: async (db) => {
+const [...summary] = await db.sql`
+    select 
+    event_date date,	user_number::int users,	new_user_number::int new_users,	session_number::int sessions,	sum_session_duration::int sessions_duration,	bounce_number::int bounces,
+    bounces::float / session_number::float bounce_rate,
+    new_user_number::float / user_number::float retantion
+     from s
+    `
+const [...summary1] = await db.sql`
+    select * ,
+        bounces::float / sessions::float bounce_rate,
+    new_users::float / users::float retantion
+    from (
+        select 
+            sum(users)::int users, sum(new_users)::int new_users, sum(sessions)::int sessions, sum(sessions_duration)::float sessions_duration, sum(bounces)::int bounces
+        from (
+            select 
+                event_date date,	user_number::int users,	new_user_number::int new_users,	session_number::int sessions,	sum_session_duration::float sessions_duration,	bounce_number::int bounces
+            from s
+        )
+    )
+    `    
+return {summary,summary1};
+}});
+
+define({id: "cc6dc982", outputs: ["trendNumber","lineChart"], body: async () => {
+const [{trendNumber}, {lineChart}] = await Promise.all([import("../_import/components/trendNumber.d31e6ad4.js"), import("../_import/components/lineChart.e37967f8.js")]);
+
+return {trendNumber,lineChart};
+}});
+
+define({id: "09ce3d7c", inputs: ["Generators","resize","lineChart","summary","summary1"], outputs: ["generateValue","activeUsersChart","engagementRateChart","wauPerMauChart","engagedSessionsChart","activeUsers","engagementRate","wauPerMau","engagedSessions"], body: (Generators,resize,lineChart,summary,summary1) => {
+// Like Generators.input, but works with resize, and adds a default value.
+function generateValue(target, defaultValue) {
+  return Generators.observe((notify) => {
+    const changed = ({target}) => notify(target.value ?? defaultValue);
+    if (defaultValue !== undefined) notify(defaultValue);
+    target.addEventListener("input", changed);
+    return () => target.removeEventListener("input", changed);
+  });
+}
+
+const activeUsersChart = resize((width) => lineChart(summary, {width, y: "sessions"}));
+const engagementRateChart = resize((width) => lineChart(summary, {width, y: "bounce_rate", percent: true}));
+const wauPerMauChart = resize((width) => lineChart(summary, {width, y: "retantion", percent: true}));
+const engagedSessionsChart = resize((width) => lineChart(summary, {width, y: "new_users"}));
+
+const activeUsers = generateValue(activeUsersChart, summary1[0]);
+const engagementRate = generateValue(engagementRateChart, summary1[0]);
+const wauPerMau = generateValue(wauPerMauChart, summary1[0]);
+const engagedSessions = generateValue(engagedSessionsChart, summary1[0]);
+return {generateValue,activeUsersChart,engagementRateChart,wauPerMauChart,engagedSessionsChart,activeUsers,engagementRate,wauPerMau,engagedSessions};
+}});
+
+define({id: "ad29d886", mode: "inline", inputs: ["activeUsers","display"], body: async (activeUsers,display) => {
+display(await(
+activeUsers["sessions"].toLocaleString("en-US")
+))
+}});
+
+define({id: "9eee7cf1", mode: "inline", inputs: ["trendNumber","summary","activeUsers","display"], body: async (trendNumber,summary,activeUsers,display) => {
+display(await(
+trendNumber(summary, {focus: activeUsers, value: "sessions"})
+))
+}});
+
+define({id: "4a2685d4", mode: "inline", inputs: ["activeUsersChart","display"], body: async (activeUsersChart,display) => {
+display(await(
+activeUsersChart
+))
+}});
+
+define({id: "5f0ce0db", mode: "inline", inputs: ["engagementRate","display"], body: async (engagementRate,display) => {
+display(await(
+engagementRate["bounce_rate"].toLocaleString("en-US", {style: "percent"})
+))
+}});
+
+define({id: "521429ba", mode: "inline", inputs: ["trendNumber","summary","engagementRate","display"], body: async (trendNumber,summary,engagementRate,display) => {
+display(await(
+trendNumber(summary, {focus: engagementRate, value: "bounce_rate", format: {style: "percent"}})
+))
+}});
+
+define({id: "796cb377", mode: "inline", inputs: ["engagementRateChart","display"], body: async (engagementRateChart,display) => {
+display(await(
+engagementRateChart
+))
+}});
+
+define({id: "d323a9a2", mode: "inline", inputs: ["wauPerMau","display"], body: async (wauPerMau,display) => {
+display(await(
+wauPerMau["retantion"].toLocaleString("en-US", {style: "percent"})
+))
+}});
+
+define({id: "7cfa833a", mode: "inline", inputs: ["trendNumber","summary","wauPerMau","display"], body: async (trendNumber,summary,wauPerMau,display) => {
+display(await(
+trendNumber(summary, {focus: wauPerMau, value: "retantion", format: {style: "percent"}})
+))
+}});
+
+define({id: "3e7a1a25", mode: "inline", inputs: ["wauPerMauChart","display"], body: async (wauPerMauChart,display) => {
+display(await(
+wauPerMauChart
+))
+}});
+
+define({id: "620dd444", mode: "inline", inputs: ["engagedSessions","display"], body: async (engagedSessions,display) => {
+display(await(
+engagedSessions["new_users"].toLocaleString("en-US")
+))
+}});
+
+define({id: "d9b0c85b", mode: "inline", inputs: ["trendNumber","summary","engagedSessions","display"], body: async (trendNumber,summary,engagedSessions,display) => {
+display(await(
+trendNumber(summary, {focus: engagedSessions, value: "new_users"})
+))
+}});
+
+define({id: "a29dc80a", mode: "inline", inputs: ["engagedSessionsChart","display"], body: async (engagedSessionsChart,display) => {
+display(await(
+engagedSessionsChart
+))
+}});
+
+define({id: "97e8c018", inputs: ["db"], outputs: ["duration_dist"], body: async (db) => {
+const duration_dist = await db.sql`
+    select  duration_bucket::int as seconds, sum(freq::int)::int freq from sd
+    where event_date like '%2025%'
+    group by seconds
+    order by seconds asc
+    `    
+return {duration_dist};
+}});
+
+define({id: "fdf4d12d", inputs: ["Plot","duration_dist","display"], body: async (Plot,duration_dist,display) => {
+display(await(
+Plot.plot({
+  caption: "Figure 1. Distribution charts are impossible to build in the native GA4 UI.",
+  paddin:15,
+  grid: true,
+  y:{label: "Sessions count"},
+  marks: [
+    Plot.frame(),
+    Plot.barY(duration_dist, {x: "seconds", y: "freq", fill:"green"}),
+  ]
+})  
+
+))
+}});
+
+define({id: "1e6c3230", inputs: ["Plot","d3","FileAttachment"], outputs: ["plotLabel","fmt","colorDomain","colorRange","numbers","waterfalldata","funneldata","funnelChart","funnelRemainsChart"], body: async (Plot,d3,FileAttachment) => {
+const plotLabel = (data, dy) => 
+  Plot.text(data, {
+    x: "month",
+    y: "accu",
+    dy: dy,    
+    //frameAnchor: anchor,
+    fontWeight: "bold",
+    text: d => d3.format(".2s")(d.accu)
+  })
+const fmt = (n) => d3.format(",d")(n)
+const colorDomain = ["Increase", "Decrease", "Total"]
+ const colorRange = ["#649334", "#cc392b", "#1f77b4"]
+ const numbers = [
+  { month: "Experience start", profit: 5793 },
+  { month: "Block 1", profit: -2369 },
+  { month: "Block 2", profit: -1200 },
+  { month: "Block 3", profit: -100 },
+  { month: "Block 4", profit: -80 },
+  { month: "Block 5", profit: -300 },
+  { month: "Feedback", profit: -1490 }]    
+
+const waterfalldata = () => {
+  let last = 0, accu = 0;  
+  const waterfall = numbers.map((d, i) => {
+    last = accu;
+    accu += d.profit;
+    return {
+      month: d.month,
+      nextMonth: i < 6 ? numbers[i + 1].month : "Total",
+      prior: last,
+      accu: accu,
+      profit: d.profit
+    }    
+  });
+  
+  waterfall.push({
+    month: "Total",
+    nextMonth: null,
+    prior: 0,
+    accu: accu,
+    profit: 0
+  });
+  
+  return waterfall;
+}    
+
+const funneldata = await FileAttachment("../data/funnel.csv").csv({typed: true})
+const funnelChart = Plot.plot({
+  height: 500,
+  marginLeft: 100,
+  x: {
+    axis: null,
+    nice: true
+  },
+  y: {
+    label: "Subcategory",
+    domain: d3.groupSort(funneldata, g => -d3.sum(g, d => d.amount), d => d.subcategory)
+  },
+  marks: [
+    Plot.barX(funneldata, {
+      x1: d => -d.amount / 2,
+      x2: d => d.amount / 2,      
+      y: "subcategory",
+      fill: "subcategory",
+      title: d => `${d.subcategory}\n${fmt(d.amount)}`
+    }),
+    Plot.text(funneldata, {
+      x: 0,
+      y: "subcategory",
+      text: d => `${d["step_conversion"]}% (${d["total_conversion"]}%)`,
+      fontWeight: "bold",
+      fontSize:14,
+      fill: "white"
+    })
+  ]
+}) 
+
+
+
+const funnelRemainsChart = Plot.plot({
+    height: 500,
+    x: {
+      align: 0,    
+      round: false,
+      domain: waterfalldata().map(d => d.month)
+    },
+    y: {
+      grid: true,
+      nice: true,      
+      label: "Users",      
+      tickFormat: d3.format(".2s")
+    },
+    color: {
+      domain: colorDomain,
+      range: colorRange
+    },
+    marks: [   
+      Plot.barY(waterfalldata(), {
+        x: "month",
+        y1: "prior",
+        y2: "accu",        
+        fill: d => d.month === "Total" ? "Total" : d.profit >= 0 ? "Increase" : "Decrease",
+        title: d => d.month === "Total"
+          ? `Total: ${fmt(d.accu)}`
+          : `${d.month}\nProfit: ${fmt(d.profit)}\nRunning Total: ${fmt(d.accu)}`
+      }),
+      Plot.ruleY(waterfalldata(), {
+        x1: "month",
+        x2: "nextMonth",
+        y: "accu",        
+        strokeDasharray: "1.5"
+      }),
+      Plot.ruleY([0], {strokeDasharray: "1.5"}),
+      plotLabel(waterfalldata().filter(d => d.profit >= 0), -7),
+      plotLabel(waterfalldata().filter(d => d.profit < 0), 7)
+      //plotLabel(waterfall.filter(d => d.profit >= 0), "bottom"),
+      //plotLabel(waterfall.filter(d => d.profit < 0), "top")
+    ]
+  })
+ 
+console.log(waterfalldata())
+return {plotLabel,fmt,colorDomain,colorRange,numbers,waterfalldata,funneldata,funnelChart,funnelRemainsChart};
+}});
+
+define({id: "13c662a6", mode: "inline", inputs: ["funnelChart","display"], body: async (funnelChart,display) => {
+display(await(
+funnelChart
+))
+}});
+
+define({id: "0c78a5a5", mode: "inline", inputs: ["funnelRemainsChart","display"], body: async (funnelRemainsChart,display) => {
+display(await(
+funnelRemainsChart
+))
+}});
+
+define({id: "40842213", mode: "jsx", inputs: ["display"], outputs: ["jsx","Feedback"], body: async (display) => {
+const [{jsx}, {Feedback}] = await Promise.all([import("../_npm/react@19.1.0/jsx-runtime.2a823644.js"), import("../_import/components/Feedback.32e3b5f1.js")]);
+display(/* @__PURE__ */ jsx(Feedback, {}));
+return {jsx,Feedback};
+}});
+
+</script>
+</head>
+<body>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="../">Yugin Dmitriy</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="../experience">Experience overview</a></li>
+  </ol>
+  <details open class="observablehq-section-active">
+    <summary>Case studies</summary>
+    <ol>
+    <li class="observablehq-link observablehq-link-active"><a href="./customer-experience-journey-mapping">Customer journey mapping</a></li>
+    <li class="observablehq-link"><a href="../data-engineer/marketing-data-engineering">Marketing data engineering</a></li>
+    <li class="observablehq-link"><a href="../pbi/google-trends-reporting">Power BI Google Trends reporting</a></li>
+    <li class="observablehq-link"><a href="../conversion-optimisation/by-audience-segmentation">Conversion Optimisation</a></li>
+    </ol>
+  </details>
+  <details>
+    <summary>Solutions</summary>
+    <ol>
+    <li class="observablehq-link"><a href="../solutions/develop-gtm-variable-tag-templates">Develop GTM variable tag templates</a></li>
+    <li class="observablehq-link"><a href="../solutions/aws-data-warehouse">AWS data warehouse</a></li>
+    </ol>
+  </details>
+  <details>
+    <summary>New</summary>
+    <ol>
+    <li class="observablehq-link"><a href="../trends/marketing-analytics-trends-13">marketing trends 13 </a></li>
+    <li class="observablehq-link"><a href="../news-review/data-analytics-and-marketing-news-13">13 week news recap</a></li>
+    <li class="observablehq-link"><a href="../news-review/data-analytics-and-marketing-12-2025">12 week news recap</a></li>
+    <li class="observablehq-link"><a href="../news-review/data-analytics-and-marketing-11-2025">11 week news recap</a></li>
+    <li class="observablehq-link"><a href="../news-review/data-analytics-and-marketing-10-2025">10 week news recap</a></li>
+    <li class="observablehq-link"><a href="../new/google-tag-manger-template-in-gallery">GTM template variable in gallery</a></li>
+    </ol>
+  </details>
+</nav>
+<script>{const e=document.querySelector("#observablehq-sidebar"),t=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?t.checked=r==="true":t.indeterminate=!0;for(const o of document.querySelectorAll("#observablehq-sidebar summary")){const s=o.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${o.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
+<nav>
+<div>Contents</div>
+<ol>
+<li class="observablehq-secondary-link"><a href="#initial-assessment-and-kpi-determination">Initial assessment and KPI determination</a></li>
+<li class="observablehq-secondary-link"><a href="#developing-data-mapping-and-collection-schema">Developing Data Mapping and Collection Schema</a></li>
+<li class="observablehq-secondary-link"><a href="#implementing-necessary-tags-with-gtm">Implementing Necessary Tags with GTM</a></li>
+<li class="observablehq-secondary-link"><a href="#creating-report-in-ga-4">Creating Report in GA4</a></li>
+<li class="observablehq-secondary-link"><a href="#creating-report-using-ga-4-export-to-big-query">Creating Report Using GA4 Export to BigQuery</a></li>
+<li class="observablehq-secondary-link"><a href="#summary">Summary</a></li>
+<li class="observablehq-secondary-link"><a href="#feedback">Feedback</a></li>
+</ol>
+</nav>
+</aside>
+<main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block"><!--:3035431a:--></div>
+<h1 id="case-study-customer-experience-journey-mapping" tabindex="-1"><a class="observablehq-header-anchor" href="#case-study-customer-experience-journey-mapping">Case study : customer experience journey mapping</a></h1>
+<h2 id="scenario-overview" tabindex="-1"><a class="observablehq-header-anchor" href="#scenario-overview">Scenario Overview</a></h2>
+<p>Tracking customer experience is crucial for understanding how customers interact with your brand or products. It helps identify pain points, improve customer satisfaction, and increase retention rates. By monitoring customer experience, companies can make data-driven decisions to enhance their services and products.</p>
+<p>M'real, a beauty and cosmetics producer, aims to launch a new product in the market by promoting it through social media, with the main product communication on a web landing page. They are actively seeking a web analyst who provides the team and stakeholders with digital customer experience insights into communication performance.</p>
+<p><img src="../_file/img/customer-experience-journey.8482aa0a.jpeg" alt="customer-journey-landing-page"></p>
+<h2 id="initial-assessment-and-kpi-determination" tabindex="-1"><a class="observablehq-header-anchor" href="#initial-assessment-and-kpi-determination">Initial assessment and KPI determination</a></h2>
+<p>The landing page is designed with graphical and textual content organized into logical blocks. The main goal is to encourage users to experience the potential results of using the product by interacting with a sentiment buttons and providing feedback, such as 'should try', 'skip', or 'avoid'.</p>
+<p>user experience journey map</p>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:47de6593:--></div>
+<p>Key Performance Indicators (KPIs)</p>
+<ul>
+<li>sessions</li>
+<li>bounce rate</li>
+<li>session duration distribution</li>
+<li>each block conversion to interaction funnel</li>
+<li>feedback per user</li>
+</ul>
+<h2 id="developing-data-mapping-and-collection-schema" tabindex="-1"><a class="observablehq-header-anchor" href="#developing-data-mapping-and-collection-schema">Developing Data Mapping and Collection Schema</a></h2>
+<p>To effectively track customer experience, it's essential to develop a comprehensive data mapping and collection schema. This involves identifying key touchpoints, defining metrics, and setting up data collection methods. A well-structured schema ensures that all relevant data is captured accurately and consistently.</p>
+<p>Translating user experience journey to technical tracking map</p>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:50c8746e:--></div>
+<p>Breaking down a landing page into logical blocks, each designed to communicate a specific piece of information, helps shape the user's experience journey. Tracking the visibility of these blocks using visibility triggers ensures that the data collected reflects the information actually seen by the user.</p>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:69595e24:--></div>
+<h2 id="implementing-necessary-tags-with-gtm" tabindex="-1"><a class="observablehq-header-anchor" href="#implementing-necessary-tags-with-gtm">Implementing Necessary Tags with GTM</a></h2>
+<p>Google Tag Manager (GTM) simplifies the process of implementing tracking tags on your website. By using GTM, you can manage and deploy various tags without modifying the codebase. This section will guide you through setting up essential tags to track customer interactions and behaviors.</p>
+<p><img src="../_file/customer-journey/image-1.28ccf1ee.png" alt="alt text"></p>
+<details id="tag-code-example" style="margin:1rem;cursor: pointer;">
+  <summary>Click to expand tags code</summary>
+<pre><code>    "tag": [
+        {
+            "name": "GA4 Feedback",
+            "type": "gaawe",
+            "parameter": [
+                {
+                    "type": "LIST",
+                    "key": "eventSettingsTable",
+                    "list": [
+                        {
+                            "type": "MAP",
+                            "map": [
+                                {
+                                    "type": "TEMPLATE",
+                                    "key": "parameter",
+                                    "value": "event_text"
+                                },
+                                {
+                                    "type": "TEMPLATE",
+                                    "key": "parameterValue",
+                                    "value": "{{Event Text}}"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TEMPLATE",
+                    "key": "eventName",
+                    "value": "{{Event}}"
+                },
+            ],
+            "tagFiringOption": "ONCE_PER_EVENT",
+        },
+        {
+            "name": "GA4 Block Visible",
+            "type": "gaawe",
+            "parameter": [
+                {
+                    "type": "LIST",
+                    "key": "eventSettingsTable",
+                    "list": [
+                        {
+                            "type": "MAP",
+                            "map": [
+                                {
+                                    "type": "TEMPLATE",
+                                    "key": "parameter",
+                                    "value": "block_name"
+                                },
+                                {
+                                    "type": "TEMPLATE",
+                                    "key": "parameterValue",
+                                    "value": "{{Click ID}}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "tagFiringOption": "ONCE_PER_EVENT",
+        }
+    ]
+</code></pre>
+</details>
+<details id="trigger-code-example" style="margin:1rem;cursor: pointer;">
+  <summary>Click to expand trigger GTM code</summary>
+<pre><code>    "trigger": [
+        {
+            "name": "visibility block",
+            "type": "ELEMENT_VISIBILITY",
+            "filter": [
+                {
+                    "type": "EQUALS",
+                    "parameter": [
+                        {
+                            "type": "TEMPLATE",
+                            "key": "arg0",
+                            "value": "{{Click ID}}"
+                        }
+                    ]
+                }
+            ],
+            "parameter": [
+                {
+                    "type": "TEMPLATE",
+                    "key": "elementSelector",
+                    "value": "h2"
+                },
+                {
+                    "type": "TEMPLATE",
+                    "key": "firingFrequency",
+                    "value": "ONCE_PER_ELEMENT"
+                },
+                {
+                    "type": "TEMPLATE",
+                    "key": "selectorType",
+                    "value": "CSS"
+                },
+                {
+                    "type": "TEMPLATE",
+                    "key": "onScreenRatio",
+                    "value": "95"
+                }
+            ]
+        }
+    ]
+</code></pre>
+</details>
+<h2 id="creating-report-in-ga-4" tabindex="-1"><a class="observablehq-header-anchor" href="#creating-report-in-ga-4">Creating Report in GA4</a></h2>
+<p>Google Analytics 4 (GA4) offers advanced reporting capabilities to analyze customer experience data. Learn how to create custom reports in GA4 to visualize key metrics and gain insights into customer behavior. This section will cover the steps to set up and customize reports in GA4.</p>
+<p>By implementing tags, we can access data generated by each user experience. A funnel report would be one of the possibilities to get this data and turn it into insights at a glance. Hopefully, a well-prepared data gathering schema will make it easy to do.</p>
+<p><img src="../_file/customer-journey/image.f7818aaa.png" alt="alt text"></p>
+<p>This report clearly communicates customer journey steps based on interested breakdowns such as channels. It provides valuable information about the performance of each content block and satisfies almost all KPIs. However, it has several disadvantages, such as inflexible funnel dimensions, limited interaction level tracking, and the inability to unleash additional information that can be sent by GTM. Additionally, it can't provide one of requirement KPI, session duration distribution, because it only has an average duration built-in metric.</p>
+<h2 id="creating-report-using-ga-4-export-to-big-query" tabindex="-1"><a class="observablehq-header-anchor" href="#creating-report-using-ga-4-export-to-big-query">Creating Report Using GA4 Export to BigQuery</a></h2>
+<p>For more advanced analysis, exporting GA4 data to BigQuery allows to leverage SQL queries and integrate with other data sources. This section will explain how to export GA4 data to BigQuery and create detailed reports to uncover deeper insights into customer experience.</p>
+<div class="observablehq observablehq--block"><!--:f93ae33f:--></div>
+<div class="observablehq observablehq--block"><!--:cc6dc982:--></div>
+<style type="text/css">
+
+.crop {
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+</style>
+<div class="observablehq observablehq--block"><!--:09ce3d7c:--></div>
+<details id="bigquery-code-example" style="margin:1rem;cursor: pointer;">
+  <summary>Click to expand BigQuery SQL code</summary>
+<pre><code>    "code": [
+        {
+            `WITH Step1 AS (
+SELECT
+    user_pseudo_id,
+    MIN(event_timestamp) AS step1_timestamp
+FROM
+    your_dataset
+WHERE
+    event_name = 'page_view'  -- Example: User views a specific page
+    AND page_location LIKE '%/step1-page/%' -- Replace with your step 1 page URL
+    AND _TABLE_SUFFIX BETWEEN '20231026' AND '20231027' -- Adjust date range
+GROUP BY 1),Step2 AS (
+SELECT
+    user_pseudo_id,
+    MIN(event_timestamp) AS step2_timestamp
+FROM
+    your_dataset
+WHERE
+    event_name = 'add_to_cart' -- Example: User adds item to cart
+    AND _TABLE_SUFFIX BETWEEN '20231026' AND '20231027' -- Adjust date range
+GROUP BY 1),Step3 AS (
+SELECT
+    user_pseudo_id,
+    MIN(event_timestamp) AS step3_timestamp
+FROM
+    your_dataset
+WHERE
+    event_name = 'begin_checkout' -- Example: User starts checkout
+    AND _TABLE_SUFFIX BETWEEN '20231026' AND '20231027' -- Adjust date range
+GROUP BY 1),Step4 AS (
+SELECT
+    user_pseudo_id,
+    MIN(event_timestamp) AS step4_timestamp
+FROM
+    your_dataset
+WHERE
+    event_name = 'purchase' -- Example: User completes a purchase
+    AND _TABLE_SUFFIX BETWEEN '20231026' AND '20231027' -- Adjust date range
+GROUP BY 1) SELECT
+COUNT(DISTINCT s1.user_pseudo_id) AS step1_users,
+COUNT(DISTINCT s2.user_pseudo_id) AS step2_users,
+COUNT(DISTINCT s3.user_pseudo_id) AS step3_users,
+COUNT(DISTINCT s4.user_pseudo_id) AS step4_users,
+COUNT(DISTINCT CASE WHEN s2.user_pseudo_id IS NOT NULL THEN s1.user_pseudo_id END) AS step1_to_2,
+COUNT(DISTINCT CASE WHEN s3.user_pseudo_id IS NOT NULL THEN s2.user_pseudo_id END) AS step2_to_3,
+COUNT(DISTINCT CASE WHEN s4.user_pseudo_id IS NOT NULL THEN s3.user_pseudo_id END) AS step3_to_4 FROM
+Step1 AS s1 LEFT JOIN
+Step2 AS s2 ON s1.user_pseudo_id = s2.user_pseudo_id LEFT JOIN
+Step3 AS s3 ON s2.user_pseudo_id = s3.user_pseudo_id LEFT JOIN
+Step4 AS s4 ON s3.user_pseudo_id = s4.user_pseudo_id;
+
+        `}
+    ]    
+</code></pre>
+</details>
+<div class="grid grid-cols-4">
+  <div class="card crop">
+    <h2>Sessions</h2>
+    <span class="big"><observablehq-loading></observablehq-loading><!--:ad29d886:--></span>
+    <observablehq-loading></observablehq-loading><!--:9eee7cf1:-->
+    <observablehq-loading></observablehq-loading><!--:4a2685d4:-->
+  </div>
+  <div class="card crop">
+    <h2>Bounce rate</h2>
+    <span class="big"><observablehq-loading></observablehq-loading><!--:5f0ce0db:--></span>
+    <observablehq-loading></observablehq-loading><!--:521429ba:-->
+    <observablehq-loading></observablehq-loading><!--:796cb377:-->
+  </div>
+  <div class="card crop">
+    <h2>Conversion to feedback</h2>
+    <span class="big"><observablehq-loading></observablehq-loading><!--:d323a9a2:--></span>
+    <observablehq-loading></observablehq-loading><!--:7cfa833a:-->
+    <observablehq-loading></observablehq-loading><!--:3e7a1a25:-->
+  </div>
+  <div class="card crop">
+    <h2>Users with feedback</h2>
+    <span class="big"><observablehq-loading></observablehq-loading><!--:620dd444:--></span>
+    <observablehq-loading></observablehq-loading><!--:d9b0c85b:-->
+    <observablehq-loading></observablehq-loading><!--:a29dc80a:-->
+  </div>
+</div>
+<div class="observablehq observablehq--block"><!--:97e8c018:--></div>
+<p>The set of KPI cards allows:</p>
+<ul>
+<li>Integration with other applications like this</li>
+<li>Providing more complex calculations than Google Analytics UI can do</li>
+</ul>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:fdf4d12d:--></div>
+<p>Some charts are impossible to build using the GA4 UI or GA4 reporting API. This is where direct streaming data comes to help. Such information can reveal hidden patterns in user behavior because valuable patterns can be detected to improve the user experience for the majority.</p>
+<div class="observablehq observablehq--block"><!--:1e6c3230:--></div>
+<div class="grid grid-cols-2">
+  <div class="card">
+    <h2>Funnel conversion</h2>
+    <observablehq-loading></observablehq-loading><!--:13c662a6:-->
+  </div>
+  <div class="card">
+    <h2>Funnel residuals</h2>
+    <observablehq-loading></observablehq-loading><!--:0c78a5a5:-->
+  </div>
+</div>
+<h2 id="summary" tabindex="-1"><a class="observablehq-header-anchor" href="#summary">Summary</a></h2>
+<p>From this case study, we can learn how to break down the customer journey into key steps and map them to a data tracking system. Tracking user experience as a journey with certain points gives us the ability to measure the success of marketing communication, especially for new launches or awareness forming. It is clear to see that this is not rocket science. Now we are able to perform the next steps such as:</p>
+<ul>
+<li>extending the customer journey to remarketing or even product sales steps</li>
+<li>running content optimization A/B tests using KPIs to form hypotheses</li>
+<li>forecasting future brand forming campaign performance</li>
+<li>making recommendations for improvements to the current running campaign</li>
+<li>developing advanced user experiences by adding more interactions and journey points</li>
+</ul>
+<h2 id="feedback" tabindex="-1"><a class="observablehq-header-anchor" href="#feedback">Feedback</a></h2>
+<div class="observablehq observablehq--block"><!--:40842213:--></div>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="../experience"><span>Experience overview</span></a><a rel="next" href="../data-engineer/marketing-data-engineering"><span>Marketing data engineering</span></a></nav>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2025-04-05T12:03:14">Apr 5, 2025</a>.</div>
+</footer>
+</div>
+</body>
+</html>

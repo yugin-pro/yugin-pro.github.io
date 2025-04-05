@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.0">
+<title>Mastering power bi reporting | Yugin Dmitriy</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="../_observablehq/theme-air,near-midnight.dcdbf18e.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="../_observablehq/theme-air,near-midnight.dcdbf18e.css">
+<link rel="modulepreload" href="../_observablehq/client.ba604ce8.js">
+<link rel="modulepreload" href="../_observablehq/runtime.9393ab6d.js">
+<link rel="modulepreload" href="../_observablehq/stdlib.55124be9.js">
+<link rel="modulepreload" href="../_observablehq/stdlib/mermaid.2bd94947.js">
+<link rel="modulepreload" href="../_npm/mermaid@11.6.0/dist/mermaid.esm.min.mjs.865ecc3a.js">
+
+    <meta name="keywords" content="power bi report, dax , dax futures, power query, m language, powerbi, power bi dashboard,power bi reporting, power bi professional, power bi expert, power bi analytics, google bi, data analytics power bi">
+    <meta name="description" content="How to use power bi to facilitate google trends service as source of data">
+    <meta name="author" content="Yugin Dmitriy">
+    <link rel="icon" href="../_file/web-analyst.21c0b145.ico" type="image/png" sizes="48x48">
+  <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M282T4N');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="google-site-verification" content="SnaMInDF57_RYreZY9l7S1zwVfZSGmcLEV421Ohkl_g">
+  <meta name="msvalidate.01" content="DEA98ACCD6D8E6BB2DF43CD0031A6E00">
+    
+<script type="module">
+
+import {define} from "../_observablehq/client.ba604ce8.js";
+
+define({id: "24061499", inputs: ["mermaid","display"], body: async (mermaid,display) => {
+display(await(
+await mermaid`graph LR
+    A[Start: Load Folder] --> B{Combine Files};
+    B --> C{Parse Data: Make Rising and TOP parts as column};
+    C --> D{Clean Data: Trim & Convert types};
+    D --> E[End: Load Table];`
+))
+}});
+
+</script>
+</head>
+<body>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="../">Yugin Dmitriy</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="../experience">Experience overview</a></li>
+  </ol>
+  <details open class="observablehq-section-active">
+    <summary>Case studies</summary>
+    <ol>
+    <li class="observablehq-link"><a href="../customer-journey/customer-experience-journey-mapping">Customer journey mapping</a></li>
+    <li class="observablehq-link"><a href="../data-engineer/marketing-data-engineering">Marketing data engineering</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./google-trends-reporting">Power BI Google Trends reporting</a></li>
+    <li class="observablehq-link"><a href="../conversion-optimisation/by-audience-segmentation">Conversion Optimisation</a></li>
+    </ol>
+  </details>
+  <details>
+    <summary>Solutions</summary>
+    <ol>
+    <li class="observablehq-link"><a href="../solutions/develop-gtm-variable-tag-templates">Develop GTM variable tag templates</a></li>
+    <li class="observablehq-link"><a href="../solutions/aws-data-warehouse">AWS data warehouse</a></li>
+    </ol>
+  </details>
+  <details>
+    <summary>New</summary>
+    <ol>
+    <li class="observablehq-link"><a href="../trends/marketing-analytics-trends-13">marketing trends 13 </a></li>
+    <li class="observablehq-link"><a href="../news-review/data-analytics-and-marketing-news-13">13 week news recap</a></li>
+    <li class="observablehq-link"><a href="../news-review/data-analytics-and-marketing-12-2025">12 week news recap</a></li>
+    <li class="observablehq-link"><a href="../news-review/data-analytics-and-marketing-11-2025">11 week news recap</a></li>
+    <li class="observablehq-link"><a href="../news-review/data-analytics-and-marketing-10-2025">10 week news recap</a></li>
+    <li class="observablehq-link"><a href="../new/google-tag-manger-template-in-gallery">GTM template variable in gallery</a></li>
+    </ol>
+  </details>
+</nav>
+<script>{const e=document.querySelector("#observablehq-sidebar"),t=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?t.checked=r==="true":t.indeterminate=!0;for(const o of document.querySelectorAll("#observablehq-sidebar summary")){const s=o.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${o.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
+<nav>
+<div>Contents</div>
+<ol>
+<li class="observablehq-secondary-link"><a href="#source-data-structure">Source Data structure</a></li>
+<li class="observablehq-secondary-link"><a href="#power-query-etl-process">Power Query ETL process</a></li>
+<li class="observablehq-secondary-link"><a href="#power-bi-data-modeling">Power BI Data Modeling</a></li>
+<li class="observablehq-secondary-link"><a href="#dax-flexible-way-for-sophisticated-reporting">DAX flexible way for sophisticated reporting</a></li>
+<li class="observablehq-secondary-link"><a href="#power-bi-visualisation">Power BI Visualisation</a></li>
+<li class="observablehq-secondary-link"><a href="#trade-offs-and-future-development-power-bi-dashboard">Trade-off&#x27;s and future development power bi dashboard</a></li>
+<li class="observablehq-secondary-link"><a href="#conclusion">Conclusion</a></li>
+</ol>
+</nav>
+</aside>
+<main id="observablehq-main" class="observablehq">
+<h1 id="mastering-power-bi-google-trends-reporting" tabindex="-1"><a class="observablehq-header-anchor" href="#mastering-power-bi-google-trends-reporting">Mastering Power BI: Google trends reporting</a></h1>
+<p>The marketing team aims to increase the success rates of articles by personalizing content and using audience segments to create more appealing text for target audiences. They plan to create engaging graphic materials and page layouts, discover new unexplored topics, and identify low-competition areas.</p>
+<p>To hit this project's targets, together with the team, we decided to use Google Trends data. To facilitate insight delivery, I proposed using Power BI as expert, a handy tool for data transformation and visualization. In this case study, I will cover pwer bi professional dashboard creating from scratch:</p>
+<ul>
+<li>Source Data</li>
+<li>Power Query ETL process</li>
+<li>Data Modeling</li>
+<li>DAX leveraging</li>
+<li>Visualization</li>
+</ul>
+<p>Additionally, I will consider some trade-offs and provide a summary.</p>
+<h2 id="source-data-structure" tabindex="-1"><a class="observablehq-header-anchor" href="#source-data-structure">Source Data structure</a></h2>
+<p><a href="https://trends.google.com/trends/explore?date=now%207-d&amp;geo=NL&amp;q=%252Fg%252F121vr6rm&amp;hl=en-GB" target="_blank" rel="noopener noreferrer">Google trends UI</a>
+<img src="../_file/pbi/image.c870b045.png" alt="google trends related queries"></p>
+<p><img src="../_file/pbi/image-1.3091e582.png" alt="google trends related queries download"></p>
+<h2 id="power-query-etl-process" tabindex="-1"><a class="observablehq-header-anchor" href="#power-query-etl-process">Power Query ETL process</a></h2>
+<p>To create the power bi ETL on expert level with power query, we need to consider the following requirements:</p>
+<ul>
+<li>Easy scaling</li>
+<li>Simple maintenance</li>
+<li>Hardware capability</li>
+<li>Logic portability</li>
+</ul>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:24061499:--></div>
+<p>Storing source data as files in a folder ensures easy scalability if needed and can be portable to other ETL tools like DWH based on Google Storage or AWS S3 or Microsoft Fabric. The ETL logic can be implemented using BigQuery or Redshift. Separating the whole process into a step-by-step power bi expert level flow helps with maintenance and error detection because we can easily control each step and monitor results. The suggested logic does not relate to any hardware requirements but instead follows the direct requirements from the Power BI tool.</p>
+<details id="tag-code-example" style="margin:1rem;cursor: pointer;">
+  <summary>Click to expand Power BI Power Query code</summary>
+<pre><code>let
+    Source = Folder.Files("C:\Your\Folder\Path"), // Replace "C:\Your\Folder\Path" with the actual path to your folder
+    FilteredHiddenFiles = Table.SelectRows(Source, each [Attributes]?[Hidden]&lt;&gt;true),
+    InvokeCustomFunction = Table.AddColumn(FilteredHiddenFiles, "Transform File", each #"Transform File"([Content])),
+    ExpandedTransformFile = Table.ExpandTableColumn(InvokeCustomFunction, "Transform File", Table.ColumnNames(#"Transform File"(#"Sample File"))),
+    RemovedOtherColumns = Table.SelectColumns(ExpandedTransformFile,{"Name", "Transform File.Category", "Transform File.Date", "Transform File.Terms", "Transform File.Value"}),
+    RenamedColumns = Table.RenameColumns(RemovedOtherColumns,{{"Name", "FileName"}, {"Transform File.Category", "Category"}, {"Transform File.Date", "Date"}, {"Transform File.Terms", "Terms"}, {"Transform File.Value", "Value"}}),
+    ChangedTypes = Table.TransformColumnTypes(RenamedColumns,{{"FileName", type text}, {"Category", type text}, {"Date", type text}, {"Terms", type text}, {"Value", type text}}),
+    SplitDate = Table.SplitColumn(ChangedTypes, "Date", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), {"StartDate", "EndDate", "Location"}),
+    ChangedTypes1 = Table.TransformColumnTypes(SplitDate,{{"StartDate", type date}, {"EndDate", type date}, {"Location", type text}}),
+    TrimmedText = Table.TransformColumns(ChangedTypes1,{{"Terms", Text.Trim, type text}})
+in
+    TrimmedText
+
+// Function to transform each file
+(BinaryData as binary) =&gt;
+let
+    Source = Csv.Document(BinaryData,[Delimiter="#(tab)", Columns=1, Encoding=1251, QuoteStyle=QuoteStyle.None]),
+    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    SplitColumn = Table.SplitColumn(PromotedHeaders, "Category: All categories", Splitter.SplitTextByDelimiter(":", QuoteStyle.Csv), {"Category", "Data"}),
+    ChangedType = Table.TransformColumnTypes(SplitColumn,{{"Category", type text}, {"Data", type text}}),
+    SplitData = Table.SplitColumn(ChangedType, "Data", Splitter.SplitTextByDelimiter("(", QuoteStyle.Csv), {"Date", "Terms"}),
+    ChangedType1 = Table.TransformColumnTypes(SplitData,{{"Date", type text}, {"Terms", type text}}),
+    SplitTerms = Table.SplitColumn(ChangedType1, "Terms", Splitter.SplitTextByDelimiter(null, QuoteStyle.Csv), {"Terms", "Value"}),
+    ChangedType2 = Table.TransformColumnTypes(SplitTerms,{{"Terms", type text}, {"Value", type text}}),
+    TrimmedText = Table.TransformColumns(ChangedType2,{{"Terms", Text.Trim, type text}, {"Value", Text.Trim, type text}}),
+    FilteredRows = Table.SelectRows(TrimmedText, each ([Terms] &lt;&gt; null and [Terms] &lt;&gt; "")),
+    RemovedLastRow = Table.RemoveLastN(FilteredRows,1)
+in
+    RemovedLastRow
+
+// Sample File used to generate column names
+#"Sample File" = Csv.Document(File.Contents("C:\Your\Folder\Path\SampleFileName.csv"),[Delimiter="#(tab)", Columns=1, Encoding=1251, QuoteStyle=QuoteStyle.None]) // Replace with an actual file name in your folder
+</code></pre>
+</details>
+<h2 id="power-bi-data-modeling" tabindex="-1"><a class="observablehq-header-anchor" href="#power-bi-data-modeling">Power BI Data Modeling</a></h2>
+<p>Getting the final power query output table is not enough. We need to create additional tables to:</p>
+<ul>
+<li>Make date-relative calculations</li>
+<li>Make phrase comparison calculations</li>
+<li>Make word-level calculations</li>
+</ul>
+<p>To get all these additional calculations accessible in visualization, we have to combine all these tables in the data model. This is professional way to orginise relations between many sources and table in Power BI</p>
+<p><img src="../_file/pbi/image-2.e7402764.png" alt="data model power bi"></p>
+<p>It is important to take into account that data modeling affects charts' cross-filtering behavior. As a Power BI professional with more than 5 years of experience, I strongly recommend considering this step highly important. A poorly designed data model can lead to incorrect calculations that are hard to track.</p>
+<h2 id="dax-flexible-way-for-sophisticated-reporting" tabindex="-1"><a class="observablehq-header-anchor" href="#dax-flexible-way-for-sophisticated-reporting">DAX flexible way for sophisticated reporting</a></h2>
+<p>One of "super power" of Power BI is ability alter mesures withoout necessety to change data model.</p>
+<p><img src="../_file/pbi/image-3.70b5bf24.png" alt="dax power bi">
+Here is a screenshot showing a bunch of KPIs that indicate the difference between the past week and the week before. To make this calculation possible, DAX language allows redefining filter contexts. Thus, even if a chart has a filter for the past week, the comparison value is taken from the context with a filter for one week before the past. It's kind of magic, isn't it?</p>
+<details id="tag-code-example" style="margin:1rem;cursor: pointer;">
+  <summary>Click to expand DAX code</summary>
+<pre><code>uniq requests = DISTINCTCOUNT('google-trends-etl-output'[request])
+uniq requests 0 week = 
+	CALCULATE(
+		[uniq requests],
+		'google-trends-etl-output'[week_passed] IN { 0 }
+	)
+uniq requests 1 week = 
+	CALCULATE(
+		[uniq requests],
+		'google-trends-etl-output'[week_passed] IN { 1 }
+	)
+</code></pre>
+</details>
+<h2 id="power-bi-visualisation" tabindex="-1"><a class="observablehq-header-anchor" href="#power-bi-visualisation">Power BI Visualisation</a></h2>
+<p>Power BI provides the ability to create multi-interactional dashboards, meaning interactions with one chart can affect nearby charts (this behavior can be adjusted). This feature allows experts users to extract valuable information with just a few clicks. For developers, it is highly professional to consider how potential consumers will utilize the dashboard, what questions they are trying to answer, and what the dashboard consumer journey should be. Of course, it is impossible to cover all possible paths and answer all questions. Therefore, understanding the key questions the dashboard must answer is the most important objective before starting.</p>
+<p>By leveraging a Top-Down analysis pattern, the dashboard will be separated into a list with more general information in the first sheet and more specific details in the subsequent sheets.</p>
+<p><img src="../_file/pbi/image-4.5ec5fb0e.png" alt="General info power bi"></p>
+<p>When dealing with data over time, it is crucial to understand how it associates with past week results. This analysis helps in detecting potential problems with the data and ensures accurate and professional reporting. By comparing the current week's data with the previous week's data, we can identify trends, anomalies, and areas that need attention.</p>
+<p><img src="../_file/pbi/image-5.3143df55.png" alt="Rising request power bi"></p>
+<p>Playing around with rising request words spectrum and requests grouped by topics can make it easy to see patterns between topics and requests and grow team expertise.</p>
+<p><img src="../_file/pbi/image-6.bf4fbee4.png" alt="Top request power bi"></p>
+<p>Top requests provide valuable information about interest structure, where many query words can be regrouped over different topics and reveal the main interest concept formed by user search behavior.</p>
+<h2 id="trade-offs-and-future-development-power-bi-dashboard" tabindex="-1"><a class="observablehq-header-anchor" href="#trade-offs-and-future-development-power-bi-dashboard">Trade-off's and future development power bi dashboard</a></h2>
+<h3 id="trade-offs" tabindex="-1"><a class="observablehq-header-anchor" href="#trade-offs">Trade-offs</a></h3>
+<ul>
+<li><strong>Data Freshness</strong>: Google Trends data may not always be up-to-date.</li>
+<li><strong>Data Granularity</strong>: Limited detail for niche analyses.</li>
+<li><strong>ETL Complexity</strong>: Setting up and maintaining ETL can be time-consuming.</li>
+<li><strong>Performance</strong>: Large datasets may slow down dashboards.</li>
+<li><strong>Data Integration</strong>: Combining with other data sources can be challenging.</li>
+<li><strong>Learning Curve</strong>: Requires time to learn Power BI and DAX.</li>
+</ul>
+<h3 id="future-development" tabindex="-1"><a class="observablehq-header-anchor" href="#future-development">Future Development</a></h3>
+<ul>
+<li><strong>Enhanced Integration</strong>: Combine Google Trends with other data sources.</li>
+<li><strong>Real-time Processing</strong>: Capture and analyze trends promptly.</li>
+<li><strong>Advanced Analytics</strong>: Use machine learning for deeper insights.</li>
+<li><strong>Custom Visualizations</strong>: Tailor visualizations to business needs.</li>
+<li><strong>User-friendly Dashboards</strong>: Design interactive and easy-to-use dashboards.</li>
+<li><strong>Scalability</strong>: Optimize for larger datasets.</li>
+<li><strong>Automated Reporting</strong>: Generate and distribute reports regularly.</li>
+<li><strong>Collaboration</strong>: Improve sharing and commenting features.</li>
+</ul>
+<p>By addressing these trade-offs and focusing on future development, the Google Trends analysis using Power BI can become a powerful tool for understanding user behavior and driving data-driven decisions.</p>
+<h2 id="conclusion" tabindex="-1"><a class="observablehq-header-anchor" href="#conclusion">Conclusion</a></h2>
+<p>In conclusion, Power BI can grow expertixe and provide the team with access to data insights hidden in Google Trends. Developing such a dashboard requires be professional in both development and user-market understanding to interpret the dashboard's charts in terms of user behavior and the process of extracting valuable information that can be implemented by the content team. Playing around with chart filters allows for a deep dive into user interest, increasing the chances of crafting content that appeals to the audience.</p>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="../data-engineer/marketing-data-engineering"><span>Marketing data engineering</span></a><a rel="next" href="../conversion-optimisation/by-audience-segmentation"><span>Conversion Optimisation</span></a></nav>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2025-04-05T12:03:14">Apr 5, 2025</a>.</div>
+</footer>
+</div>
+</body>
+</html>
